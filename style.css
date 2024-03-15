@@ -111,7 +111,7 @@ button:hover
 }
 .aboutUs
 {
-    height:550px;
+    height:600px;
     background-color: aliceblue;
     text-align: center;
 }
@@ -149,13 +149,6 @@ button:hover
     }
 }
 @media(max-width:520px)
-{
-    .aboutUs
-    {
-        height:800px;
-    }
-}
-@media(max-width:480px)
 {
     .aboutUs
     {
