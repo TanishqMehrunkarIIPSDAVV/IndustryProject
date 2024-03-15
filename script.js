@@ -30,7 +30,6 @@ $(window).resize(function()
 {
     const navbar=document.querySelector("#navbar-list");
     const menu=document.querySelector("#menu");
-    const navbarMenu=document.querySelector("#navbar-list-menu");
     menu.style.display="none";
     navbar.style.display="flex";
     widthFunc();
