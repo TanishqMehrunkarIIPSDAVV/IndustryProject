@@ -24,7 +24,7 @@
 }
 .bg1
 {
-    background-color: rgba(0, 93, 100, 0.5);
+    background-color: rgba(100, 100, 100, 0.5);
     background-blend-mode: multiply;
     background-image: url(factory-free-img.jpg);
 }
@@ -40,12 +40,12 @@
 }
 .logo
 {
-    color:aliceblue;
     position:absolute;
-    top:25px;left:25px;
-    font-size: 25px;
-    font-family: font-bold;
-    font-weight: bolder;
+    top:0px;left:10px;
+}
+.logo:hover
+{
+    cursor: pointer;
 }
 .logo div
 {
@@ -103,10 +103,56 @@ button:hover
 {
     background-color: rgba(243, 41, 41, 0.575);
 }
-@media(max-width:500px)
+.aboutUs
+{
+    height:550px;
+    background-color: aliceblue;
+    text-align: center;
+}
+.aboutUsDiv
+{
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.aboutUsDiv div
+{
+    font-family: font-bold;
+    font-size:large;
+}
+.aboutUsDiv p
+{
+    font-size:xx-large;
+    font-family: font-bold;
+}
+.aboutUsDiv span
+{
+    font-size:large;
+    font-family:font-regular;
+}
+@media(max-width:555px)
 {
     .title
     {
         font-size: 45px;
+    }
+    .aboutUs
+    {
+        height:850px;
+    }
+}
+@media(max-width:520px)
+{
+    .aboutUs
+    {
+        height:800px;
+    }
+}
+@media(max-width:480px)
+{
+    .aboutUs
+    {
+        height:800px;
     }
 }

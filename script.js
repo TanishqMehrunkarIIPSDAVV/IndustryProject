@@ -38,3 +38,5 @@ $(window).resize(function()
 widthFunc();
 
 menu.addEventListener("click",clicked);
+
+document.querySelector("#logo").addEventListener("click",()=>{window.location.reload();});
