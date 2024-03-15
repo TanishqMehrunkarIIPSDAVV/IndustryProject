@@ -22,6 +22,12 @@
     width:100%;
     display:table;
 }
+
+.item_collapse
+{
+    text-align: right;
+    padding-bottom: 4px;
+}
 .bg1
 {
     background-color: rgba(0, 93, 100, 0.5);
