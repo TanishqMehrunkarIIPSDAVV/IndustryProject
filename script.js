@@ -40,3 +40,6 @@ widthFunc();
 menu.addEventListener("click",clicked);
 
 document.querySelector("#logo").addEventListener("click",()=>{window.location.reload();});
+
+
+//-------------------------------------------------Zakie ka bug menu click
