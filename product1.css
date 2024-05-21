@@ -51,12 +51,12 @@ body {
   
   .mainWrapper {
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-width: 320px;
-    min-height: 1000px;
+    min-height: 100vh;
     padding: 0;
     margin: 0 !important;
-    background: radial-gradient(rgb(48, 61, 85), rgb(47, 51, 82));
+    background: radial-gradient(rgb(58, 116, 224), rgb(14, 15, 26));
   }
   
   .wrappen_block {
@@ -66,9 +66,9 @@ body {
   }
   
   .mainBackground {
-    width: 100%;
-    min-height: 1000px;
-    background: url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgRectangl.png?raw=true") left center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgPhons.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/layer-3-copy-2.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/mainBg.png?raw=true") center center no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    /* background: url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgRectangl.png?raw=true") left center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgPhons.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/layer-3-copy-2.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/mainBg.png?raw=true") center center no-repeat; */
   }
   
   .productCard_block {
@@ -492,15 +492,4 @@ body {
     padding: 0;
     color: #37474f;
     font-size: 13px;
-  }
-  .aboutMe a {
-    display: block;
-    width: 30%;
-    position: fixed;
-    bottom: 0.1%;
-    left: 20px;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.5em;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
   }
