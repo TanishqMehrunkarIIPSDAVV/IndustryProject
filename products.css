@@ -40,7 +40,7 @@ body{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .wsk-cp-text{
-  padding-top:150%;
+  padding-top:100%;
 }
 .wsk-cp-text .category{
   text-align:center;
@@ -65,6 +65,7 @@ body{
 }
 .wsk-cp-text .category > span{
   padding: 12px 30px;
+  width: 70%;
   border: 1px solid #313131;
   background:#212121;
   color:#fff;
@@ -77,6 +78,7 @@ body{
   border-color:#ddd;
   box-shadow: none;
   padding: 11px 28px;
+  width: 70%;
 }
 .wsk-cp-product:hover .wsk-cp-text .category{
   margin-top: 0px;
@@ -173,7 +175,7 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   display:inline-block;
   margin: 0 5px;
 }
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .wsk-cp-product{
     margin:40px auto;
   }
@@ -196,4 +198,4 @@ a.buy-btn{
   background: #FF9800;
   color: #fff;
 }
-}
+} */
