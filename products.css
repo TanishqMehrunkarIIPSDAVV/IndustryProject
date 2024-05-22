@@ -173,7 +173,7 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   display:inline-block;
   margin: 0 5px;
 }
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .wsk-cp-product{
     margin:40px auto;
   }
@@ -196,4 +196,4 @@ a.buy-btn{
   background: #FF9800;
   color: #fff;
 }
-}
+} */
