@@ -65,6 +65,7 @@ body{
 }
 .wsk-cp-text .category > span{
   padding: 12px 30px;
+  width: 70%;
   border: 1px solid #313131;
   background:#212121;
   color:#fff;
@@ -77,6 +78,7 @@ body{
   border-color:#ddd;
   box-shadow: none;
   padding: 11px 28px;
+  width: 70%;
 }
 .wsk-cp-product:hover .wsk-cp-text .category{
   margin-top: 0px;
