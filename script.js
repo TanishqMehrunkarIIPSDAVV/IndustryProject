@@ -10,6 +10,15 @@ const widthFunc=()=>
     }
 }
 
+//---------------------------------------Contact Us
+
+document.querySelector(".navbar").addEventListener("click",(e)=>
+{
+    if(e.target.classList.contains("contact"))
+    {
+        window.open("ContactUs.html","_blank");
+    }
+})
 
 const clicked=()=>
 {
