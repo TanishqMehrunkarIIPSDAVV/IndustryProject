@@ -1,16 +1,23 @@
+
 const widthFunc=()=>
 {
     const menu=document.querySelector("#menu");
     const navbar=document.querySelector("#navbar-list");
+    const navbarMenu=document.querySelector("#navbar-list-menu");
     let width=window.innerWidth;
     if(width<800)
     {
         navbar.style.display="none";
         menu.style.display="block";
     }
+    else
+    {
+        if(navbarMenu.classList.contains("navbar-list-menu-clicked"))
+        {
+            window.location.reload();
+        }
+    }
 }
-
-
 const clicked=()=>
 {
     const navbarMenu=document.querySelector("#navbar-list-menu");
@@ -35,11 +42,9 @@ $(window).resize(function()
     widthFunc();
 });
 
+
 widthFunc();
-
-menu.addEventListener("click",clicked);
-
+menu.addEventListener("click",clicked)
 document.querySelector("#logo").addEventListener("click",()=>{window.location.reload();});
 
 
-//-------------------------------------------------Zakie ka bug menu click
