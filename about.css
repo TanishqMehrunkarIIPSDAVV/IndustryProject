@@ -150,18 +150,28 @@ button:hover
 .content-2{
     display: contents;
 }
+#menu{
+    padding-left:84px;
+}
+
+
+@media screen and (max-width:800px) {
+    #menu{
+        padding-left: 0px;
+    }
+}
 
 @media screen and (max-width:470px) {
     .about
     {
-        font-size: 70px;
+        font-size: 60px;
     }
 }
 
 @media screen and (max-width:330px) {
     .about
     {
-        font-size: 50px;
+        font-size: 40px;
     }
 }
 
@@ -195,3 +205,7 @@ button:hover
     }
 }
 
+footer {
+    background: #f9f8f8;
+    color: black;
+  }
