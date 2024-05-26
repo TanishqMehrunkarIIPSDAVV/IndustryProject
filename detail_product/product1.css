@@ -8,7 +8,7 @@ body {
     min-width: 320px;
     position: relative;
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
@@ -325,6 +325,23 @@ body {
     height: 100%;
     z-index: 30;
     transition: left, ease-out, 0.5s;
+    overflow: auto;
+  }
+  .block_descriptionCharacteristic::-webkit-scrollbar {
+    width: 1em;
+  }
+ 
+  .block_descriptionCharacteristic::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(4, 0, 255, 0.3);
+  }
+
+  .block_descriptionCharacteristic::-webkit-scrollbar-thumb {
+    background: rgb(169, 173, 179); 
+    /* border-radius: 10px; */
+  }
+  
+  .block_descriptionCharacteristic::-webkit-scrollbar-thumb {
+    outline: 1px solid rgb(5, 24, 43);
   }
   .block_descriptionCharacteristic__active {
     left: 0;
