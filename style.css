@@ -1,6 +1,7 @@
 *
 {
     margin:0;
+    scroll-behavior:smooth;
 }
 @font-face
 {
@@ -18,6 +19,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-blend-mode: multiply;
     height:100vh;
     width:100%;
     display:table;
@@ -31,8 +33,18 @@
 .bg1
 {
     background-color: rgba(100, 100, 100, 0.5);
-    background-blend-mode: multiply;
     background-image: url(factory-free-img.jpg);
+}
+.bg2
+{
+    /* background: #f8f9fa; */
+    background-color: rgba(100, 100, 100, 0.329);
+}
+.product-title
+{
+    text-align: center;
+    font-family: font-bold;
+    font-size:50px;
 }
 .title
 {
@@ -44,7 +56,7 @@
     font-size: 100px;
     font-family: font-bold;
 }
-.logo
+/* .logo
 {
     position:absolute;
     top:0px;left:10px;
@@ -58,8 +70,8 @@
     font-weight: normal;
     font-family:font-regular;
     font-size:20px;
-}
-.navbar
+} */
+/* .navbar
 {
     font-family: font-regular;
     color:aliceblue;
@@ -88,7 +100,7 @@
 {
     display:grid;
     gap:7px;
-}
+} */
 button
 {
     border-radius: 20px;
@@ -109,49 +121,18 @@ button:hover
 {
     background-color: rgba(243, 41, 41, 0.575);
 }
-.aboutUs
-{
-    height:600px;
-    background-color: aliceblue;
-    text-align: center;
-}
-.aboutUsDiv
-{
-    position:relative;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-.aboutUsDiv div
-{
-    font-family: font-bold;
-    font-size:large;
-}
-.aboutUsDiv p
-{
-    font-size:xx-large;
-    font-family: font-bold;
-}
-.aboutUsDiv span
-{
-    font-size:large;
-    font-family:font-regular;
-}
 @media(max-width:555px)
 {
     .title
     {
         font-size: 45px;
     }
-    .aboutUs
+    .product-title
     {
-        height:850px;
+        font-size: 30px;
     }
 }
 @media(max-width:520px)
 {
-    .aboutUs
-    {
-        height:800px;
-    }
+    
 }

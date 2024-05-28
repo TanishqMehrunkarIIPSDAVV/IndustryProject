@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.P. Industries</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="./material-design-iconic-font.min.css" />
+    <script src="bootstrap.min.js"></script>
     <script src="jquery.js"></script>
 </head>
 <body>
     <div class="bg bg1">
-        <div class="logo">
+        <!-- <div class="logo">
             <center>
                 <img id="logo" src="logo.svg" width="115" height="115"/>
             </center>
-        </div>
-        <div class="navbar">
+        </div> -->
+        <!-- <div class="navbar">
             <nav style="display:inline-grid;gap: 5px;">
                 <img id="menu" style="padding-left:84px;" src="Menu_white.png" width="45" height="45"/>
                 <ul type="none" id="navbar-list-menu" class="navbar-list-menu">
@@ -42,7 +46,7 @@
                     <a style="color: white;text-decoration:none;" href="./about.html">
                       <li class="item item_collapse">About</li>
                     </a>
-                    <a style="color: white;text-decoration:none;" href="./products.html">
+                    <a style="color: white;text-decoration:none;" href="#products">
                       <li class="item item_collapse">Products</li>
                     </a>
                     <li class="item">
@@ -52,24 +56,590 @@
                     </li>
                   </ul>
             </nav>
+        </div> -->
+        <div>
+          <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <a href="#" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="logo.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+                <!-- Logo Text -->
+                <span class="text-uppercase font-weight-bold">Company</span>
+              </a>
+          
+              <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+          
+              <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
         <div class="title">
             A.P. Industries
         </div>
     </div>
-    <div class="aboutUs">
-        <div class="aboutUsDiv">
-            <div>About Us</div><br>
-            <p>
-                19 Long Years Of Manufacturing Excellence With Quality At Its Best!
-            </p><br>
-            <span>
-                Established in 2005, A. P. Industries is a leading organization engaged in the area of manufacturing a broad plethora of Crusher Machine, Chain Link Making Machine, Vibrating Screen, Rotary Screen and much more. In their development process, we assure that only top notch basic material is used by our professionals along with ultra-modern tools and machinery. Besides this, we check these on a variety of grounds before finally shipping them at the destination of our customers. Together with this, our offered facility of customization has earned us huge number of satisfied customers.
-
-                Our facility is divided into a number of departments. Working in close coordination with each other, all these are headed by their respective managers in order to maintain a friendly and organized environment at work. Working under the mentorship of Mr. Rajeev V. R., we have acquired a reputed stature in the industry.
-            </span><br><br>
-            <a href="./about.html"><button>See More</button></a>
+    <div class="bg2 bg" id="products">
+      <br>
+      <div class="product-title">Products</div>
+      <div class="shell">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/KL/RV/MY-26987868/industrial-rotary-screen-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Rotary Screen</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn" data-product="product1">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/UK/NU/MY-26987868/rotary-screen-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Rotary Screen</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left price">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/BV/DP/MY-26987868/rotary-screen-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Rotary Screen</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/PP/SP/MY-26987868/single-deck-vibrating-screen-machine-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Vibrating Screen</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-6">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/CF/JB/MY-26987868/vibrating-screen-machine-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Ethnic</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/RG/MT/MY-26987868/vibrating-screen-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Introvert</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/TX/MP/MY-26987868/vibrating-screen-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Beauty</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/PF/WM/MY-26987868/mn-casting-jaw-plate-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/XL/LF/MY-26987868/crusher-jaw-plate-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/MU/FO/ANDROID-26987868/product-250x250.jpeg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/MB/IS/MY-26987868/cone-crusher-bowl-liner-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/NV/XA/MY-26987868/stone-crusher-springs-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/EC/WV/MY-26987868/socket-sealing-ring-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/EA/UA/MY-26987868/double-toggle-jaw-crusher-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/MX/QM/MY-26987868/jaw-stone-crusher-250x250.jpg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img
+                    src="https://4.imimg.com/data4/US/VH/ANDROID-26987868/product-250x250.jpeg"
+                    alt="Product"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>
+                      Description Product tell me how to change playlist height
+                      size like 600px in html5 player. player good work now check
+                      this link
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left">
+                      <span class="price">Rp500.000</span>
+                    </div>
+                    <div class="wcf-right btn">
+                      details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 </body>
 <script src="script.js"></script>
