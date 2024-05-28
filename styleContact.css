@@ -1,18 +1,6 @@
-.bg_contact
-{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height:100vh;
-    width:100%;
-    display:table;
-    background-color: rgba(57, 57, 131, 0.781);
-    background-blend-mode: multiply;
-}
-*
-{
-    margin:0;
+.contact-bg{
+  background: #2f333a;
+    color: aliceblue;
 }
   
   #contact {
