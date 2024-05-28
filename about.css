@@ -206,6 +206,11 @@ button:hover
 }
 
 footer {
-    background: #f9f8f8;
-    color: black;
+    background: #2f333a;
+    color: aliceblue;
   }
+
+.small
+{
+    color:aliceblue;
+}
