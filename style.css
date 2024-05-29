@@ -30,6 +30,11 @@
     background-color: rgba(100, 100, 100, 0.5);
     background-image: url(factory-free-img.jpg);
 }
+.bg2
+{
+    /* background-image:url(bg2.jpg); */
+    background-color: #dfffd2;
+}
 .title
 {
     color:aliceblue;
@@ -50,19 +55,22 @@
 {
     cursor: pointer;
 }
-@media(max-width:520px)
+.products
 {
-    .title
-    {
-        font-size: 30px;
-    }
+    font-size:50px;
+    font-family: font-regular;
+    text-align: center;
+    width: 100%;
+    background-color: aliceblue;
 }
-@media(max-width:555px)
+.prod-img
 {
-    .title
-    {
-        font-size: 45px;
-    }
+    width:200px;
+    height:200px;
+}
+.card
+{
+    align-items: center;
 }
 @media(max-width:770px)
 {
@@ -74,5 +82,38 @@
     {
         width:75px;
         height:75px;
+    }
+    .products
+    {
+        font-size: 40px;
+    }
+}
+@media(max-width:450px)
+{
+    .title
+    {
+        font-size: 50px;
+    }
+    .products
+    {
+        font-size: 25px;
+    }
+}
+@media(max-width:555px)
+{
+    .title
+    {
+        font-size: 60px;
+    }
+    .products
+    {
+        font-size: 30px;
+    }
+}
+@media(max-width:520px)
+{
+    .title
+    {
+        font-size: 50px;
     }
 }
