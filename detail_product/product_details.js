@@ -1,3 +1,4 @@
+
 window.onload = function () {
 
     //// SLIDER
@@ -72,23 +73,6 @@ window.onload = function () {
 
 ///// Back Navigation code
 
-document.querySelector(".clearfix").addEventListener("click", (e) =>{
-    console.log("cliked")
 
-    if(!e.target.classList.contains("product_block")){
-        // e.preventDefault();
+};   
 
-        console.log("cliked2")
-        // console.log(target.classList)
-        window.open(`../`,`_self`);
-    }
-})
-// document.getElementById('main-page').onclick = function(e) {
-//     if(e.target != document.getElementById('product-block')) {
-//         console.log('You clicked outside');
-//     } else {
-//         console.log('You clicked inside');
-//     }
-//   }
-
-};    
