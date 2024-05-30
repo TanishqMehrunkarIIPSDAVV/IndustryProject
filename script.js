@@ -1,1 +1,3 @@
-document.querySelector("#logo").addEventListener("click",()=>{window.location.reload();});
+document.querySelector("#logo").addEventListener("click", () => {
+  window.location.reload();
+});
