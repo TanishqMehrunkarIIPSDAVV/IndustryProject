@@ -111,7 +111,7 @@ body{
   margin-bottom:15px;
 }
 .card-footer{
-  padding: 25px 0 5px;
+  /* padding: 25px 0 5px; */
   border-top: 1px solid #ddd;
 }
 .card-footer:after, .card-footer:before{
@@ -132,8 +132,8 @@ body{
 }
 
 .price{
-  font-size:18px;
-  font-weight:bold;
+  font-size:16px;
+  font-weight:bolder;
 }
 
 a.buy-btn{
@@ -149,26 +149,28 @@ a.buy-btn{
   transition: all 0.2s ease-in-out;
 }
 a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
-  border-color: #FF9800;
-  background: #FF9800;
+  border-color: #1a88e2;
+  background: #1a88e2;
   color: #fff;
   text-decoration:none;
 }
 .wsk-btn{
   display:inline-block;
-  color:#212121;
+  color: aliceblue;
   text-align:center;
-  font-size: 18px;
+  font-size: 12px;
+  font-weight: bolder;
   transition: all 0.2s ease-in-out;
-  border-color: #FF9800;
-  background: #FF9800;
-  padding:12px 30px;
-  border-radius:27px;
+  border-color: #1a88e2;
+  background: #1a88e2;
+  padding:6px 20px;
+  border-radius:6px;
   margin: 0 5px;
 }
 .wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
   text-decoration:none;
-  color:#fff;
+  color:black;
+  /* border: 1px solid black; */
 }  
 .red{
   color:#F44336;
@@ -176,8 +178,9 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   display:inline-block;
   margin: 0 5px;
 }
+
 /* extras */
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .wsk-cp-product{
     margin:40px auto;
   }
@@ -196,16 +199,13 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   margin-top: 0px;
 }
 a.buy-btn{
-  border-color: #FF9800;
-  background: #FF9800;
+  border-color: #1a88e2;
+  background: #1a88e2;
   color: #fff;
 }
-}
-.btn{
-  background-color: #1a88e2;
-  color: #fff;
-  font-weight: bold;
-}
+} */
+
+
 .price{
   padding-top: 5px;
 }
@@ -213,6 +213,8 @@ a.buy-btn{
 .product_details{
   display: none;
   position: absolute;
+  height: 60%;
+  width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -222,6 +224,8 @@ a.buy-btn{
 .product_desc{
   display: block;
   position: absolute;
+  height: 618px;
+  width: 1100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

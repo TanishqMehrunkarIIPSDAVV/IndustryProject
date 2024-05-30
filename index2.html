@@ -12,107 +12,56 @@
     <script src="jquery.js"></script>
 </head>
 <body>
-    <div class="bg bg1">
-        <!-- <div class="logo">
-            <center>
-                <img id="logo" src="logo.svg" width="115" height="115"/>
-            </center>
-        </div> -->
-        <!-- <div class="navbar">
-            <nav style="display:inline-grid;gap: 5px;">
-                <img id="menu" style="padding-left:84px;" src="Menu_white.png" width="45" height="45"/>
-                <ul type="none" id="navbar-list-menu" class="navbar-list-menu">
-
-                    <a style="color: white;text-decoration:none;" href="./index.html">
-                      <li class="item item_collapse">Home</li>
-                    </a>
-                    <a style="color: white;text-decoration:none;" href="./about.html">
-                      <li class="item item_collapse">About</li>
-                    </a>
-                    <a style="color: white;text-decoration:none;" href="./products.html">
-                      <li class="item item_collapse">Products</li>
-                    </a>
-                    <li class="item item_collapse">
-                      <a href="./ContactUs.html">
-                        <button class="item_collapse">Contact</button>
-                      </a>
+  <div class="bg bg1">
+    <div class="row bg-dark header">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-8 col-xl-8">
+            <img src="logo.svg" width="115" height="115" class="logo"/>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4 col-xl-4">
+            <br>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link px-2" href="#" style="color:aliceblue;">Home</a>
                     </li>
-          
-                  </ul>
-                  <ul type="none" id="navbar-list">
-                    <a style="color: white;text-decoration:none;" href="./index.html">
-                      <li class="item item_collapse">Home</li>
-                    </a>
-                    <a style="color: white;text-decoration:none;" href="./about.html">
-                      <li class="item item_collapse">About</li>
-                    </a>
-                    <a style="color: white;text-decoration:none;" href="#products">
-                      <li class="item item_collapse">Products</li>
-                    </a>
-                    <li class="item">
-                      <a href="./ContactUs.html">
-                        <button class="p-1">Contact</button>
-                      </a>
+                    <li class="nav-item">
+                      <a class="nav-link px-2" href="about.html" style="color:aliceblue;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-2" href="#products" style="color:aliceblue;">Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-danger contact px-2" href="#contact">Contact Us</a>
                     </li>
                   </ul>
-            </nav>
-        </div> -->
-          <div class="logo">
-            <center>
-              <img id="logo" src="logo.png" width="115" height="115" />
-            </center>
-          </div>
-          <div class="navbar">
-            <nav style="display:inline-grid;gap: 5px;">
-              <div style="position:relative;padding-left:37px;">
-                <img id="menu" style="z-index:10;" src="Menu_white.png" width="45" height="45" alt="errr" />
-              </div>
-      
-              <ul type="none" id="navbar-list-menu" class="navbar-list-menu">
-      
-                <a style="color: white;text-decoration:none;" href="./index.html">
-                  <li class="item item_collapse">Home</li>
-                </a>
-                <a style="color: white;text-decoration:none;" href="/about.html">
-                  <li class="item item_collapse">About</li>
-                </a>
-                <a style="color: white;text-decoration:none;" href="/products.html">
-                  <li class="item item_collapse">Products</li>
-                </a>
-                <li class="item item_collapse">
-                  <a href="./ContactUs.html">
-                    <button class="item_collapse">Contact</button>
-                  </a>
-                </li>
-      
-              </ul>
-              <ul type="none" id="navbar-list">
-                <a style="color: white;text-decoration:none;" href="./">
-                  <li class="item item_collapse">Home</li>
-                </a>
-                <a style="color: white;text-decoration:none;" href="/about.html">
-                  <li class="item item_collapse">About</li>
-                </a>
-                <a style="color: white;text-decoration:none;" href="/products.html">
-                  <li class="item item_collapse">Products</li>
-                </a>
-                <li class="item">
-                  <a href="./ContactUs.html">
-                    <button class="p-1">Contact</button>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+                </div>
+              </nav>
+        </div>
+    </div>
         <div class="title">
             A.P. Industries
         </div>
     </div>
     <div class="bg2 bg" id="products">
-      <br>
-      <div class="product-title">Products</div>
+      <div class="products">
+        Products
+      </div>
+      <br><br>
+      
+      <!-- description  -->
+      <!-- <iframe name="iframe" class="product_details"> -->
+
+      </iframe>
       <div class="shell">
         <div class="container">
           <div class="row">
+
+            <!-- first product -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -137,16 +86,21 @@
                     </p>
                   </div>
                   <div class="card-footer">
-                    <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                    <div class="wcf-left mx-1">
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn" data-product="product1">
-                      details
+                    <div class="wcf-right wsk-btn mx-1" data-product="product1">
+                      <a class="product_" href="detail_product/product1.html" target="iframe">
+                        details
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- second product -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -172,15 +126,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left price">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- third product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -206,15 +163,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- fourth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -240,19 +200,28 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            
           </div>
+
+          <!-- first row end  -->
   
+          <!-- second row  -->
+
           <div class="row">
-            <div class="col-md-6">
+
+            <!-- fifth product  -->
+
+            <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
                   <img
@@ -277,15 +246,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- sixth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -311,15 +283,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- seventh product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -345,15 +320,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- eigth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -379,15 +357,26 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+          </div>
+          
+          <!-- second row end  -->
+
+          <!-- third row  -->
+
+          <div class="row">
+
+            <!-- ninth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -413,15 +402,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- tenth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -447,15 +439,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- eleventh product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -481,15 +476,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- twelth product  -->
+          
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -515,15 +513,24 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <!-- third row end  -->
+
+          <!-- fourth row  -->
+
+          <div class="row">
+
+            <!-- thirteen product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -549,15 +556,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- fourtenth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -583,15 +593,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- fiftenth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -617,15 +630,18 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- sixtenth product  -->
+
             <div class="col-md-3">
               <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
@@ -651,9 +667,9 @@
                   </div>
                   <div class="card-footer">
                     <div class="wcf-left">
-                      <span class="price">Rp500.000</span>
+                      <span class="price">Rs 500.000</span>
                     </div>
-                    <div class="wcf-right btn">
+                    <div class="wcf-right wsk-btn">
                       details
                     </div>
                   </div>
@@ -666,4 +682,5 @@
     </div>
 </body>
 <script src="script.js"></script>
+<script src="products.js"></script>
 </html>
