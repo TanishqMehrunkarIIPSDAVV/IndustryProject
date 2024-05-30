@@ -1,74 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-<hash>"
-      crossorigin="anonymous"
-    />
 
-    <script src="jquery.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>About Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-<hash>" crossorigin="anonymous" />
+
+  <script src="jquery.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+
+  <!-- test  -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- test  -->
+
+</head>
 
 <body>
-  <div class="bg bg_gradiant">
-    <div class="logo">
-      <center>
-        <img id="logo" src="logo.png" width="115" height="115" />
-      </center>
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
     </div>
-    <div class="navbar">
-      <nav style="display:inline-grid;gap: 5px;">
-        <div style="position:relative;padding-left:37px;">
-          <img id="menu" style="z-index:10;" src="Menu_white.png" width="45" height="45" alt="errr" />
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@yourdomain.com</span></a>
+          <span class="mx-md-2 d-inline-block"></span>
+          <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">1+ (234) 5678 9101</span></a>
+
+
+          <div class="float-right">
+
+            <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span class="d-none d-md-inline-block">Twitter</span></a>
+            <span class="mx-md-2 d-inline-block"></span>
+            <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
+
+          </div>
+
         </div>
 
-        <ul type="none" id="navbar-list-menu" class="navbar-list-menu">
+      </div>
 
-          <a style="color: white;text-decoration:none;" href="./index.html">
-            <li class="item item_collapse">Home</li>
-          </a>
-          <a style="color: white;text-decoration:none;" href="/about.html">
-            <li class="item item_collapse">About</li>
-          </a>
-          <a style="color: white;text-decoration:none;" href="/products.html">
-            <li class="item item_collapse">Products</li>
-          </a>
-          <li class="item item_collapse">
-            <a href="./ContactUs.html">
-              <button class="item_collapse">Contact</button>
-            </a>
-          </li>
-
-        </ul>
-        <ul type="none" id="navbar-list">
-          <a style="color: white;text-decoration:none;" href="./">
-            <li class="item item_collapse">Home</li>
-          </a>
-          <a style="color: white;text-decoration:none;" href="/about.html">
-            <li class="item item_collapse">About</li>
-          </a>
-          <a style="color: white;text-decoration:none;" href="/products.html">
-            <li class="item item_collapse">Products</li>
-          </a>
-          <li class="item">
-            <a href="./ContactUs.html">
-              <button class="p-1">Contact</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+
+
+        <div class="site-logo">
+          <a href="index.html" class="text-black"><span class="text-primary">Brand</a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-right ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="#home-section" class="nav-link">Home</a></li>
+              <li><a href="#services-section" class="nav-link">Services</a></li>
+
+
+              <li class="has-children">
+                <a href="#about-section" class="nav-link">About Us</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="#team-section" class="nav-link">Team</a></li>
+                  <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
+                  <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                  <li class="has-children">
+                    <a href="#">More Links</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Menu One</a></li>
+                      <li><a href="#">Menu Two</a></li>
+                      <li><a href="#">Menu Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="#why-us-section" class="nav-link">Why Us</a></li>
+
+              <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+              <li><a href="#blog-section" class="nav-link">Blog</a></li>
+              <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+  <div class="bg bg_gradiant">
+   
+    <!-- about  -->
     <div class="about">
       <p>About Us </p>
     </div>
@@ -108,6 +161,164 @@
         </div>
       </div>
     </div>
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <hr>
+    </div>
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="p-5">
+              <h2 style="font-weight: 600">
+                Basic Information
+              </h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="font-weight: 600">
+              <p>Nature of Business</p>
+              <p>Additional Business</p>
+              <p>Company CEO</p>
+              <p style="margin-bottom: 63px;">Registered Address</p>
+              <p>Total Number of Employees</p>
+              <p>Year of Establishment</p>
+              <p>Legal Status of Firm</p>
+              <p>Annual Turnover</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="font-weight: 600">
+              <p>Nature of Business</p>
+              <p>Importer, Distributor, Wholesaler, Trader</p>
+              <p>Juzer Haideri</p>
+              <p>129/B,SANWER ROAD,SECTOR-E near Behind Deepmala Dhaba, 452009, Indore, Madhya Pradesh, India</p>
+              <p>11 to 25 People</p>
+              <p>2011</p>
+              <p>Limited Company (Ltd./Pvt.Ltd.)</p>
+              <p>Rs. 10 - 25 Crore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <hr>
+    </div>
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="p-5">
+              <h2 style="font-weight: 600">
+                Infrastructure
+              </h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="font-weight: 600">
+              <p>Location Type</p>
+              <p>Building Infrastructure</p>
+              <p>Size of Premises</p>
+              <p>Space Around</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="font-weight: 600">
+              <p>URBAN</p>
+              <p>Permanent</p>
+              <p>69 square feet</p>
+              <p>Front porch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <hr>
+    </div>
+
+
+    <div class="pt-3 pb-3" style="background-color: #ffffff;">
+      <div class="containerR">
+        <h2> Our Happy Clients </h2>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, atque? Repudiandae
+            possimus asperiores hic nemo id a molestiae minus impedit!</p>
+    
+        <!-- Clients Review Section -->
+        <div class="reviewSection">
+
+        <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">
+                        <span>Kartikey *YADAV*</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Sab kuch sahi tha lekin moter me jangh laga hua tha</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+
+        <!-- Clients Review-2 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">
+                        <span>Soham Kothari</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">mereko ye sahi he laga utna acha nhi tha mid tha</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+
+        <!-- Clients Review-3 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">   
+                        <span>Tanishq Mehrunkar</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">moter toh wo lagati thi</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 
     <div class="p-4" style="background-color: #f9f8f8">
       <div class="mt-5 mb-5">
@@ -181,29 +392,18 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="products.html">Products</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <div id="googleMap" style="width: 50%">
-            <iframe
-            width="520"
-            height="302"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?width=520&amp;height=302&amp;hl=en&amp;q=129/B,SANWER%20ROAD,,SECTOR-E%20No.%20129/B,%20Sector%20E,%20Behind%20Deepmala%20Dhaba%20Indore+(AP%20Industries)&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe>
-          <a href="https://www.versicherungen.at/tier-krankenversicherung/"
-            >Tierkrankenversicherung</a
-          >
+            <iframe width="520" height="302" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=520&amp;height=302&amp;hl=en&amp;q=129/B,SANWER%20ROAD,,SECTOR-E%20No.%20129/B,%20Sector%20E,%20Behind%20Deepmala%20Dhaba%20Indore+(AP%20Industries)&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <a href="https://www.versicherungen.at/tier-krankenversicherung/">Tierkrankenversicherung</a>
           </div>
-          
-          <script
-            type="text/javascript"
-            src="https://embedmaps.com/google-maps-authorization/script.js?id=4f1486a449b8ef76da5ab4f001015989e4135e77"
-          ></script>
+
+          <script type="text/javascript"
+            src="https://embedmaps.com/google-maps-authorization/script.js?id=4f1486a449b8ef76da5ab4f001015989e4135e77"></script>
 
           <!-- <script>
             function myMap() {
@@ -220,7 +420,13 @@
         </div>
       </div>
     </footer>
-  </body>
-  <script src="script.js"></script>
-  <script src="about.js"></script>
+</body>
+<script src="script.js"></script>
+<script src="about.js"></script>
+<!-- test  -->
+<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
 </html>
