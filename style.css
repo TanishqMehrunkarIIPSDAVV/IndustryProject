@@ -121,27 +121,45 @@
 {
     .title
     {
-        padding-top: 700px;
+        padding-top: 200px;
+        padding-bottom: 150px;
         display: grid;
         justify-content: center;
     }
-
+    .ap
+    {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .carousel-image
+    {
+        width:60%;
+        height:50%;
+    }
 }
 
 @media(max-width:555px)
 {
-    .cards
+    .title
     {
-        padding-top: 400px;
+        padding-top: 100px;
+        padding-bottom: 200px;
         display: grid;
         justify-content: center;
     }
+    .cards
+    {
+        padding-bottom: -100px;
+        display: grid;
+        justify-content: center;
+    }
+
 }
 @media(max-width:900px)
 {
     .cards
     {
-        margin-top:-400px;
+
         display: grid;
         justify-content: center;
         row-gap: 20px;
@@ -174,7 +192,7 @@
 {
     .title
     {
-        padding-top: 500px;
+        
         
     }
     .card
