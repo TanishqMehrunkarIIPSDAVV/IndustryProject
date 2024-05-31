@@ -39,12 +39,14 @@
 {
     color:aliceblue;
     font-family: font-bold;
-    position:absolute;
+    position:relative;
     top:30%;
     left:50%;
     transform: translate(-50%,-50%);
     font-size: 100px;
     width:100%;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
 }
 .contact:hover
@@ -71,6 +73,66 @@
 .card
 {
     align-items: center;
+}
+.carousel-image
+{
+    width:500px;
+    height:250px;
+}
+.cards
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+    left:50%;
+    top:25%;
+    transform: translate(-50%,-50%);
+}
+.card-notbs
+{
+    width:200px;
+    height:150px;
+    font-size: x-large;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    text-align: center;
+    color:black;
+}
+.card-notbs:hover
+{
+    color:aliceblue;
+    background-color: rgb(74, 247, 166);
+}
+.positioned
+{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+@media(max-width:1025px)
+{
+    .title
+    {
+        display: grid;
+        justify-content: center;
+    }
+}
+@media(max-width:900px)
+{
+    .cards
+    {
+        display: grid;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .card-notbs
+    {
+        width:150px;
+        height:100px;
+    }
 }
 @media(max-width:770px)
 {
@@ -115,5 +177,10 @@
     .title
     {
         font-size: 50px;
+    }
+    .carousel-image
+    {
+        width:350px;
+        height:200px;
     }
 }
