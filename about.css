@@ -121,7 +121,7 @@ hr{
     }
 }
 
-@media screen and (max-width:470px) {
+/* @media screen and (max-width:470px) {
     .about
     {
         font-size: 60px;
@@ -133,7 +133,7 @@ hr{
     {
         font-size: 40px;
     }
-}
+} */
 
 @media screen  and (max-width:1000px) {
     .content-1
