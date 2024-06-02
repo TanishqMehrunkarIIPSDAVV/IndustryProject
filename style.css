@@ -84,7 +84,8 @@
 }
 
 .carousel{
-    /* top: 120px; */
+    top: 80px;
+    left: -12px;
 }
 .cards
 {
@@ -119,6 +120,9 @@
     transform: translate(-50%,-50%);
 }
 
+.sub-ap{
+    font-weight: 300;
+}
 @media(max-width:1025px)
 {
     .title
