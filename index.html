@@ -24,7 +24,19 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- test  -->
 
-    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  
+  <link rel="stylesheet" href="contact.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+  <script src="jquery.js"></script>
+
+
 </head>
 <body>
 
@@ -986,38 +998,103 @@
 
 
 
-      
+          <!-- Contact Us -->
 
-
-
-      <div class="pt-5 pb-5" style="background-color: #ffffff;">
-        <div class=" container">
-          <div class="row">
-            <div class="col-md-9">
-              <center>
-                <div class="p-5">
-                  <h3 style="font-weight: 700">
-                    Need Help with Easier Industrial Solutions? We Are Experts!
-                  </h3>
+    <div class="bg_contact">
+      <section id="contact">
+      <div class="contact-bg" >
+          <h1 class="section-header">Contact</h1>
+          <div class="contact-wrapper">
+          <!-- Left contact page --> 
+            <form id="contact-form" class="form-horizontal" role="form" autocomplete="off">
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
                 </div>
-              </center>
-            </div>
-            <div class="col-md-3">
-              <center>
-                <div class="p-5">
-                  <a href="/contact.html">
-                    <button class="p-2">Contact Us</button>
-                  </a>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
                 </div>
-              </center>
+              </div>
+              <div class="form-group">
+                <div  class="col-sm-12">
+  
+                    <input style="padding-right: 9rem;" id="phone" type="tel" name="phone" class="form-control" placeholder="PHONE NO" width="100%"  required>
+  
+                </div>
+              </div>
+              <textarea class="form-control" rows="7" placeholder="MESSAGE" name="message" required></textarea>
+              <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <div class="alt-send-button">
+                  <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                </div>
+              </button> 
+            </form>
+          <!-- Left contact page --> 
+              <div class="direct-contact-container">
+                <ul class="contact-list">
+                  <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+                  <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(xx) 555-2368</a></span></i></li>
+                  <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                </ul>
+                <hr>
+                <ul class="social-media-list">
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>       
+                </ul>
+              </div>
+          </div>
+      </div> 
+
+
+
+      <footer style="background-color: #2f333a;color:white;" class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+          <div class="row gy-4 gx-5">
+            <div class="col-lg-4 col-md-6">
+              <h5 class="h1">A.P. Industries</h5>
+              <p class="small mb-2">
+                Finding A Permanent Solution Is Our Ultimate Goal!
+              </p>
+              <p class="small mb-2">Phone: 08069033874</p>
+              <p class="small mb-2">Address: Sector E, Indore, Madhya Pradesh</p>
             </div>
+            <div class="col-lg-2 col-md-6">
+              <h5 class="mb-3">Quick links</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div id="googleMap" style="width: 50%">
+              <iframe width="520" height="302" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?width=520&amp;height=302&amp;hl=en&amp;q=129/B,SANWER%20ROAD,,SECTOR-E%20No.%20129/B,%20Sector%20E,%20Behind%20Deepmala%20Dhaba%20Indore+(AP%20Industries)&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              <a href="https://www.versicherungen.at/tier-krankenversicherung/">Tierkrankenversicherung</a>
+            </div>
+  
+            <script type="text/javascript"
+              src="https://embedmaps.com/google-maps-authorization/script.js?id=4f1486a449b8ef76da5ab4f001015989e4135e77"></script>
           </div>
         </div>
-      </div>
-    </div>
+      </footer>
 </body>
 <script src="script.js"></script>
     <!-- test  -->
+    <script src="about.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
