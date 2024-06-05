@@ -83,10 +83,7 @@
     height:450px;
 }
 
-.carousel{
-    top: 80px;
-    left: -12px;
-}
+
 .cards
 {
     display: flex;
@@ -222,15 +219,7 @@
   .carousel-inner {
     padding: 1em;
   }
-  .carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 5vh;
-  height: 5vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 @media(min-width:768px)
 {
     .shell
@@ -243,18 +232,6 @@
     }
     .card img {
         height: 11em;
-    }
-}
-@media(max-width:500px)
-{
-    .title
-    {
-        
-        
-    }
-    .card
-    {
-        padding-top:800px;
     }
 }
 @media(max-width:450px)
