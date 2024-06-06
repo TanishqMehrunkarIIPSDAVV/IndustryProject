@@ -130,6 +130,7 @@ section {
 .section-heading h4 em {
   color: #00bdfe;
   font-style: normal;
+  
 }
 
 .section-heading p {
@@ -396,11 +397,13 @@ Banner Style
 
 .main-banner {
   background-image: url(../factory-free-img.jpg);
+  background-blend-mode:overlay;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 290px;
+  padding-top: 180px;
   padding-bottom: 240px;
+  margin-bottom: 20px;
   text-align: center;
   background-color: #2a2a2a;
 }
@@ -414,7 +417,32 @@ Banner Style
 
 .main-banner h2 em {
   font-style: normal;
-  color: #00bdfe;
+  /* color: #00bdfe; */
+  color: #ffffff;
+  transform: translate(-50%,-50%);
+  background: linear-gradient(to right, #00bdfe 0, white 10%, #00bdfe 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 64px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+  
+@keyframes shine{
+  0%{
+    background-position: 0;
+  }
+  50%{
+    background-position: 190px;
+  }
+  100%{
+    background-position: 380px;
+  }
 }
 
 .main-banner p {
@@ -469,6 +497,18 @@ Banner Style
   color: #00bdfe;
 }
 
+.banner-tab{
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.062),
+    rgba(0,0,0,0.2)
+  );
+  border-radius: 16px;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
 
 
 /*
@@ -478,7 +518,7 @@ featured
 */ 
 
 section.featured-items {
-  margin-top: -150px;
+  margin-top: -200px;
 }
 
 .featured-items .item .thumb {
