@@ -273,3 +273,43 @@
         height:200px;
     }
 }
+
+/* contact */
+
+.contact-bg
+{
+    height:500px;
+    border-radius: 20px;
+}
+.contact-form
+{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:80%;
+}
+@font-face {
+    font-family: rockwell;
+    src: url(./fonts/Rockwell-Bold.ttf);
+}
+.contact-head
+{
+    color: black;
+    font-size: 30px;
+    margin-left:15px;
+}
+::placeholder
+{
+    opacity: 1;
+    font-weight: bolder;
+    color: black;
+}
+.line
+{
+    border-top: 2px solid grey;
+}
+.widths
+{
+    width: 400px;
+}

@@ -29,3 +29,11 @@ function animateWhenVisible(class_name, time, till) {
 
 animateWhenVisible("counter", 30, 15);
 animateWhenVisible("counter2", 25, 19);
+
+
+//-----------------Contact Us
+
+document.querySelector(".contact-body").addEventListener("click",(e)=>
+{
+    
+});
