@@ -288,27 +288,3 @@ article p {
     }
 }
 
-/*----- testimonial Section Style -------------------------*/
-.swiper-pagination {
-    position: unset;
-  }
-  
-  .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 10px));
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 10px));
-  }
-  
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: aliceblue;
-    background: aliceblue;
-  }
-
-  .text-muted{
-    color: rgb(0, 0, 0);
-    
-  }
-
-  #testimonial{
-    background-color: #c1f3d8;
-  }
-  
