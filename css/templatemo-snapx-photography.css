@@ -25,6 +25,11 @@ img {
   overflow: hidden;
 }
 
+em{
+  color: #00bdfe;
+  font-style: normal;
+}
+
 /* 
 ---------------------------------------------
 Global Styles
@@ -415,7 +420,7 @@ Banner Style
   line-height: 74px;
 }
 
-.main-banner h2 em {
+.main-banner h2 .name {
   font-style: normal;
   /* color: #00bdfe; */
   color: #ffffff;
