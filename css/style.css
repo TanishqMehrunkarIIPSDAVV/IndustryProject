@@ -325,7 +325,7 @@
 }
 .footer-content
 {
-    margin-top: 10px;
+    margin-top: 120px;
 }
 .footer-head
 {
@@ -334,7 +334,8 @@
 }
 .footer-map
 {
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 .footer-map iframe
 {
@@ -368,11 +369,16 @@
     {
         align-items: center;
         text-align: center;
+        margin-top: 25px;
     }
     .footer-map iframe
     {
         width: 400px;
         height:350px;
+    }
+    .footer-map{
+        margin-top: 10px;
+        margin-bottom: 10ox;
     }
 }
 .footer-body-p
