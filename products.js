@@ -15,8 +15,8 @@ document.querySelectorAll(".product_").forEach((ele)=>{
     })
 })
 
-document.addEventListener("click", (e)=>{
-    if(!e.target.classList.contains("product_desc") && !e.target.classList.contains("product_")){
-        window.location.reload();
-    }
-})
+// document.addEventListener("click", (e)=>{
+//     if(!e.target.classList.contains("product_desc") && !e.target.classList.contains("product_")){
+//         window.location.reload();
+//     }
+// })
