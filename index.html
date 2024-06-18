@@ -1596,5 +1596,12 @@
   
   <script src="js/tabs.js"></script>
   <script src="js/popup.js"></script>
-  <!-- <script src="js/custom.js"></script>   -->
+  <script>
+    if (window.screen.width > 780) {
+      document.write( 
+        '<script src="js/custom.js"><\/script>  '
+      )
+    }
+  </script>
+  
 </html>
