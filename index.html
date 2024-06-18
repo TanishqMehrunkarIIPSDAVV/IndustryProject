@@ -44,13 +44,31 @@
   <script src="js/main.js"></script>
 
 </head>
+<style>
+  .ap_logo{
+    width: 100px;
+    height:100px;
+    padding:10px;
+  }
+  @media screen and (max-width:400px) {
+    .ap_logo{
+      width: 85px;
+      height:85px;
+    }
+  }
 
+  @media screen and (max-width:400px){
+    .custom{
+      padding:10px ;
+    }
+  }
+</style>
 <body>
 
   <!-- LOADER TEMPLATE -->
-<div id="page-loader">
+<!-- <div id="page-loader">
   <div class="loader-icon fa fa-spin colored-border"></div>
-</div>
+</div> -->
 <!-- /LOADER TEMPLATE -->
 
   <div class="site-mobile-menu site-navbar-target">
@@ -91,14 +109,18 @@
     </div>
   </div>
 
-  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+  <header class="custom site-navbar js-sticky-header site-navbar-target" role="banner">
 
     <div class="container">
       <div class="row align-items-center position-relative">
 
 
         <div class="site-logo">
-          <a href="index.html" class="text-black"><span class="text-primary">Brand</a>
+          <div >
+            <img class="ap_logo" src="./logo.png" alt="error">
+          </div>
+          
+          <!-- <a href="index.html" class="text-black"><span class="text-primary">Brand</a> -->
         </div>
 
         <div class="col-12">
