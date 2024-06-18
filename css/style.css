@@ -389,7 +389,7 @@
 /* =========================
 PRELOADER
 =======================*/
-/* #page-loader {
+#page-loader {
     background: #abd8e7;
     height: 100%;
     width: 100%;
@@ -416,7 +416,7 @@ PRELOADER
     top: 50%;
     width: 50px;
     transform: translate(-50%, -50%);
-  } */
+  }
   
   .colored-border {
     border-color: #abd8e7;
