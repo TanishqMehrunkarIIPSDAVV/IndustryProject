@@ -59,9 +59,10 @@
 .products
 {
     font-size:50px;
-    font-family: font-regular;
+    font-family: rockwell;
     text-align: center;
     width: 100%;
+    font-weight: bold;
     background-color: aliceblue;
 }
 .prod-img
@@ -291,7 +292,7 @@
 }
 @font-face {
     font-family: rockwell;
-    src: url(./fonts/Rockwell-Bold.ttf);
+    src: url(../fonts/OpenSans-Regular.ttf);
 }
 .contact-head
 {
@@ -443,3 +444,40 @@ PRELOADER
       transform: rotate(359deg);
     }
   }
+
+/* Scroll to top */
+
+  .scroll-to-top {
+    position: fixed;
+    content: "";
+    right: 30px;
+    bottom: 50px;
+    z-index: 999;
+    background: #21c87a;
+    color: #fff !important;
+    border-radius: 100%;
+    opacity: 0;
+  }
+  .scroll-to-top i {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
+    display: block;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
+  }
+  
+  .scroll-to-top:hover,
+  .scroll-to-top:focus {
+    text-decoration: none;
+  }
+  
+  .reveal {
+    transition: all 0.3s;
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  
