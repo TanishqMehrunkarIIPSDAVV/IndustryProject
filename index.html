@@ -42,9 +42,44 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
 
 </head>
 <style>
+  .scroll-to-top {
+    position: fixed;
+    content: "";
+    right: 30px;
+    bottom: 50px;
+    z-index: 999;
+    background: #21c87a;
+    color: #fff !important;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  .scroll-to-top i {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
+    display: block;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
+  }
+  
+  .scroll-to-top:hover,
+  .scroll-to-top:focus {
+    text-decoration: none;
+  }
+  
+  .reveal {
+    transition: all 0.3s;
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+
   .ap_logo{
     width: 100px;
     height:100px;
@@ -56,8 +91,17 @@
       height:85px;
     }
   }
+  @media screen and (max-width:1000px){
+    .custom{
+      padding:5px ;
 
-  @media screen and (max-width:400px){
+    }
+    .ap_logo{
+      width: 80px;
+      height:80px;
+    }
+  }
+  @media screen and (max-width:500px){
     .custom{
       padding:10px ;
     }
@@ -163,7 +207,7 @@
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
-  <div class="main-banner">
+  <div id="top-header" class="main-banner">
     <div class="container banner-tab">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
@@ -171,7 +215,7 @@
             <h2>We <em>welcome</em> you to the world of <em class="name">AP Industries</em></h2>
             <p>Welcome to AP Industries, your trusted provider of high-quality industrial solutions. Discover our specialized offerings including Crusher Machines, Chain Link Making Machines, Vibrating Screens, and Rotary Screens.
               Enhance your operations with our advanced technology and reliable products tailored to meet your exact requirements.</p>
-            <div class="buttons">
+            <!-- <div class="buttons">
               <div class="big-border-button">
                 <a href="contests.html">Explore SnapX Contest</a>
               </div>
@@ -179,7 +223,7 @@
                 <a href="https://youtube.com/templatemo" target="_blank"><i class="fa fa-play"></i> Watch Our Video
                   Now</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -196,195 +240,64 @@
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img1.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Walk In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                        class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1.000 + Camera Nikon</li>
-                    </ul>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img3.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Happy In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                        class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,800 + Canon EOS R6</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img6.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Stay In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                        class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Thomas Eddy</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $4,400 + Canon EOS R5</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img7.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Walk In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                        class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $3,800 + Canon EOS R6</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img8.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Shoot In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                        class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $2,400 + Canon EOS R7</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img10.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img13.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img14.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img15.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img16.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img18.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div class="item">
               <div class="thumb">
                 <img src="./new_images/img20.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -1602,20 +1515,26 @@
       <div class="footer-map">
         <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d386.67619103504006!2d75.84567829734628!3d22.776340661601303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303005dee2233%3A0x722269cda929faaf!2sA%20P%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1718370095584!5m2!1sen!2sin"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        style="border:0;padding:30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </footer>
   </section>
+  <a style="background-color: #00bdfe !important;" id="scroll-to-top" class="scroll-to-top js-scroll-trigger" href="#top-header">
+    <i class="fa fa-angle-up"></i>
+</a>
 </div>
 </div>
 </div>
   </body>
   <!-- test 3  -->
+   
   <script src="js/owl.carousel.min.js"></script>
   
   <script src="js/tabs.js"></script>
   <script src="js/popup.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
   <script>
     if (window.screen.width > 780) {
       document.write( 
@@ -1623,5 +1542,6 @@
       )
     }
   </script>
+
   
 </html>
