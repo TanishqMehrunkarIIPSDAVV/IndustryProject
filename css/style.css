@@ -7,12 +7,12 @@
 @font-face
 {
     font-family: font-regular;
-    src: url(Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face
 {
     font-family: font-bold;
-    src: url(Montserrat-Bold.ttf);
+    src: url(../fonts/Montserrat-Bold.ttf);
 }
 .bg
 {
