@@ -9,11 +9,11 @@
   'use strict';
 
   // PRELOADER
-  $(window).on('load', function () {
-    $('#page-loader').fadeOut('slow', function () {
-      $(this).remove();
-    });
-  });
+  // $(window).on('load', function () {
+  //   $('#page-loader').fadeOut('slow', function () {
+  //     $(this).remove();
+  //   });
+  // });
 
 	// navbarDropdown
 	if ($(window).width() < 992) {
