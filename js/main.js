@@ -1,11 +1,11 @@
 $(function() {
 
 	 // PRELOADER
-	 $(window).on('load', function () {
-		$('#page-loader').fadeOut('slow', function () {
-		  $(this).remove();
-		});
-	  });
+	//  $(window).on('load', function () {
+	// 	$('#page-loader').fadeOut('slow', function () {
+	// 	  $(this).remove();
+	// 	});
+	//   });
 
   var siteSticky = function() {
 		$(".js-sticky-header").sticky({topSpacing:0});
