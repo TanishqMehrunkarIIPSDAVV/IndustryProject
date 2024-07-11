@@ -574,3 +574,21 @@ PRELOADER
     background: #fefefe;
     border-color: #125688;
   }
+
+.media
+{
+    display: flex;
+    justify-content: space-between;
+}
+table p
+{
+    font-size: large;
+}
+table
+{
+    width: 100%;
+}
+table td
+{
+    text-align: left;
+}
