@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | AP Industries</title>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="../logo.png">
+  <link rel="stylesheet" href="../css/new-product.css">
+</head>
+<body>
+
+  <section id="hero">
+    <div id="overlay"></div>
+    <div id="navbar">
+      <div id="logo-box">
+        <img id="logo" src="../logo.png" alt="Logo" />
+        <span>AP Industries</span>
+      </div>
+      <ul id="nav-items">
+        <li>HOME</li>
+        <li style="color: #00cfef;">PRODUCTS</li>
+        <li>GALLERY</li>
+        <li>CONTACT</li>
+        <li>QUALITY  ASSURANCE</li>
+
+      </ul>
+    </div>
+
+    <div id="hero-text">
+      <h1>OUR <span>PRODUCTS</span></h1>
+      <p>Dedicated to delivering excellence in iron manufacturing through robust, durable, and high-performance solutions. We combine advanced technology with industry expertise to produce superior quality iron products that meet the highest standards, ensuring reliability, efficiency, and long-term value for our clients across diverse industrial sectors</p>
+      <div class="blue-line"></div>
+    </div>
+    
+  </section>
+
+  <section id="products">
+    <h2>Explore Our Product Range</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../images/products/product1.jpg" alt="Product 1" />
+        <h3>Industrial Casting</h3>
+        <p>Precision-engineered for strength and endurance in manufacturing setups.</p>
+      </div>
+      <div class="product-card">
+        <img src="../images/products/product2.jpg" alt="Product 2" />
+        <h3>Custom Fabrication</h3>
+        <p>Tailored metalwork and fabrication for specific industrial needs.</p>
+      </div>
+      <div class="product-card">
+        <img src="../images/products/product3.jpg" alt="Product 3" />
+        <h3>Machine Components</h3>
+        <p>Highly efficient components built for critical machine operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../logo.png" alt="AP Industries Logo">
+        <span>AP Industries</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+        <a href="#">Quality Assurance</a>
+      </div>
+      <div class="footer-contact">
+        <p>&copy; 2025 AP Industries. All Rights Reserved.</p>
+        <p>Email: contact@apindustries.com</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
+
+<script>
+  function handleWrap() {
+    const navItems = document.getElementById("nav-items");
+
+    if (window.innerWidth <= 830) {
+      navItems.innerHTML = `
+        <button id="nav-btn"><i class='bxr bx-menu-wider'></i></button>
+      `;
+    } else {
+      navItems.innerHTML = `
+        <li>HOME</li>
+        <li style="color: #00cfef;">PRODUCTS</li>
+        <li>GALLERY</li>
+        <li>CONTACT</li>
+        <li>QUALITY ASSURANCE</li>
+      `;
+    }
+  }
+
+  window.addEventListener("resize", handleWrap);
+  window.addEventListener("load", handleWrap);
+
+
+  document.getElementById("nav-items").addEventListener("click", (event) => {
+    const navItems = document.getElementById("nav-items");
+
+    if (event.target.closest("#nav-btn")) {
+      document.getElementById("navbar").style.flexDirection="column";
+      navItems.style.width="100%";
+      navItems.innerHTML = `
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">HOME</li>
+        <li style="width: 100%; background: none; color: #00cfef; text-align: center; padding: 10px;">PRODUCTS</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">GALLERY</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">CONTACT</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">QUALITY ASSURANCE</li>
+        <li id="nav-btn-close" style="width: 100%; background: none; color: red; text-align: center; padding: 10px; cursor: pointer;">Close</li>
+      `;
+    }
+
+    if (event.target.id === "nav-btn-close") {
+      document.getElementById("navbar").style.flexDirection="row";
+      navItems.style.width="";
+      navItems.innerHTML = `
+        <li style="width: 100%;">
+          <button id="nav-btn" style="background: none; border: none; font-size: xx-large; color: white; cursor: pointer;">
+            <i class='bx  bx-menu-wider'></i>
+          </button>
+        </li>
+      `;
+    }
+  });
+</script>
