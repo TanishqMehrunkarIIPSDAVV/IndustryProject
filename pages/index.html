@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Industries</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" />
+  <link rel="stylesheet" href="../../css/new-style.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div id="navbar">
+      <div id="logo-box">
+        <img id="logo" src="../logo.png" alt="Logo" />
+        <span>AP Industries</span>
+      </div>
+      <ul id="nav-items">
+        <li class="active">HOME</li>
+        <li>PRODUCTS</li>
+        <li>GALLERY</li>
+        <li>CONTACT</li>
+        <li>QUALITY ASSURANCE</li>
+      </ul>
+    </div>
+    <div class="main-heading">
+      <h1>
+        <span class="heading-blue">AP</span>
+        <span class="heading-white">INDUSTRIES</span>
+      </h1>
+      <p class="heading-subtitle">
+        MAKING THE WORLD BETTER WITH INNOVATIVE INDUSTRIAL SOLUTIONS.
+      </p>
+    </div>
+    <hr class="heading-hr" />
+    <div class="main-content">
+      <div class="content-box">
+        <h2>Welcome to AP Industries</h2>
+        <p>
+          At AP Industries, we are committed to delivering high-quality industrial solutions that meet the needs of our
+          clients. Our team of experts works tirelessly to ensure that we provide the best products and services in the
+          industry.
+        </p>
+        <p>
+          Explore our range of products and services designed to enhance efficiency and productivity in your operations.
+          From cutting-edge technology to reliable support, we have everything you need to succeed.
+        </p>
+      </div>
+      <div class="hot-products">
+        <h2>HOT <blue>PRODUCTS</blue></h2>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="../new_images/img1.jpg" alt="Product 1" />
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+          </div>
+          <div class="product-item">
+            <img src="../new_images/img10.jpg" alt="Product 2" />
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+          </div>
+          <div class="product-item">
+            <img src="../new_images/img12.jpg" alt="Product 3" />
+            <h3>Product 3</h3>
+            <p>Description of Product 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function handleWrap() {
+    const navItems = document.getElementById("nav-items");
+
+    if (window.innerWidth <= 830) {
+      navItems.innerHTML = `
+        <button id="nav-btn"><i class='bxr bx-menu-wider'></i></button>
+      `;
+    } else {
+      navItems.innerHTML = `
+        <li>HOME</li>
+        <li style="color: #00cfef;">PRODUCTS</li>
+        <li>GALLERY</li>
+        <li>CONTACT</li>
+        <li>QUALITY ASSURANCE</li>
+      `;
+    }
+  }
+
+  window.addEventListener("resize", handleWrap);
+  window.addEventListener("load", handleWrap);
+
+
+  document.getElementById("nav-items").addEventListener("click", (event) => {
+    const navItems = document.getElementById("nav-items");
+
+    if (event.target.closest("#nav-btn")) {
+      document.getElementById("navbar").style.flexDirection = "column";
+      navItems.style.width = "100%";
+      navItems.innerHTML = `
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">HOME</li>
+        <li style="width: 100%; background: none; color: #00cfef; text-align: center; padding: 10px;">PRODUCTS</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">GALLERY</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">CONTACT</li>
+        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">QUALITY ASSURANCE</li>
+        <li id="nav-btn-close" style="width: 100%; background: none; color: red; text-align: center; padding: 10px; cursor: pointer;">Close</li>
+      `;
+    }
+
+    if (event.target.id === "nav-btn-close") {
+      document.getElementById("navbar").style.flexDirection = "row";
+      navItems.style.width = "";
+      navItems.innerHTML = `
+        <li style="width: 100%;">
+          <button id="nav-btn" style="background: none; border: none; font-size: xx-large; color: white; cursor: pointer;">
+            <i class='bx  bx-menu-wider'></i>
+          </button>
+        </li>
+      `;
+    }
+  });
+</script>
+
+</html>

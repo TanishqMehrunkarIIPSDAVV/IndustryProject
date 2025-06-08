@@ -1,0 +1,249 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+.background
+{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url(../images/images/nav-bar/worker-5736096_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+}
+/* Navbar */
+/* ...existing code... */
+
+/* ...existing code... */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 18px 40px;
+  border-radius: 18px;
+  margin-bottom: 36px;
+  background: none;           /* No background */
+  backdrop-filter: none;      /* No blur */
+  box-shadow: none;           /* No shadow */
+}
+
+#logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white; /* Blue accent for logo text */
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+#logo {
+  height: 54px;
+}
+
+#nav-items {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  flex-wrap: wrap;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-items li {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s cubic-bezier(.4,0,.2,1);
+  padding: 4px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  letter-spacing: 1px;
+}
+
+#nav-items li:hover,
+#nav-items li.active {
+  color: #00bfff;
+}
+
+#nav-items li::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #00bfff 0%, #00cfef 100%);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(.4,0,.2,1);
+  margin-top: 4px;
+}
+
+#nav-items li:hover::after,
+#nav-items li.active::after {
+  width: 100%;
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+.main-heading {
+  margin-top: 100px;
+  margin-left: 40px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  max-width: 700px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.main-heading h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.heading-blue {
+  color: #00bfff;
+  display: block;
+  text-shadow: 0 4px 24px rgba(0,64,128,0.2);
+  font-size: 100px;
+  letter-spacing: -1px;
+}
+
+.heading-white {
+  color: #fff;
+  display: block;
+  font-size: 100px;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.heading-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 24px;
+  color: #e0f7fa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.heading-hr
+{
+    width: 587px;
+    height: 5px;
+    background-color: #00bfff;
+    margin-left: 40px;
+    border:none;
+    border-radius: 2px;
+}
+
+.main-content
+{
+  display: flex;
+  gap: 10px;
+  margin-top: 100px;
+}
+.content-box
+{
+    margin-left: 10px;
+    width: 700px;
+    padding: 20px;
+    background-color: #00bfff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    max-height: 400px;
+}
+.content-box p
+{
+    padding: 10px;
+}
+.content-box h2
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hot-products
+{
+    padding: 20px;
+    border-radius: 12px;
+    color: black;
+}
+.hot-products h2
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: WHITE;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.hot-products blue
+{
+  color: #00bfff;
+}
+.hot-products img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+/* ...existing code... */
+
+@media(max-width: 830px)
+{
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 20px;
+    }
+
+    #nav-items {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .main-heading {
+        margin-left: 20px;
+        max-width: 90%;
+    }
+
+    .main-heading h1 {
+        font-size: 48px;
+    }
+
+    .heading-blue, .heading-white {
+        font-size: 60px;
+    }
+}
