@@ -22,113 +22,183 @@
         <li style="color: #00cfef;">PRODUCTS</li>
         <li>GALLERY</li>
         <li>CONTACT</li>
-        <li>QUALITY  ASSURANCE</li>
-
+        <li>QUALITY ASSURANCE</li>
       </ul>
     </div>
 
     <div id="hero-text">
       <h1>OUR <span>PRODUCTS</span></h1>
-      <p>Dedicated to delivering excellence in iron manufacturing through robust, durable, and high-performance solutions. We combine advanced technology with industry expertise to produce superior quality iron products that meet the highest standards, ensuring reliability, efficiency, and long-term value for our clients across diverse industrial sectors</p>
+      <p><b class="hero-paragrapgh">Dedicated to delivering excellence in iron manufacturing through robust, durable, and high-performance solutions. We combine advanced technology with industry expertise to produce superior quality iron products that meet the highest standards, ensuring reliability, efficiency, and long-term value for our clients across diverse industrial sectors</b></p>
       <div class="blue-line"></div>
     </div>
-    
   </section>
 
   <section id="products">
     <h2>Explore Our Product Range</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="../images/products/product1.jpg" alt="Product 1" />
-        <h3>Industrial Casting</h3>
-        <p>Precision-engineered for strength and endurance in manufacturing setups.</p>
-      </div>
-      <div class="product-card">
-        <img src="../images/products/product2.jpg" alt="Product 2" />
-        <h3>Custom Fabrication</h3>
-        <p>Tailored metalwork and fabrication for specific industrial needs.</p>
-      </div>
-      <div class="product-card">
-        <img src="../images/products/product3.jpg" alt="Product 3" />
-        <h3>Machine Components</h3>
-        <p>Highly efficient components built for critical machine operations.</p>
-      </div>
+    <div class="product-grid" id="product-grid">
     </div>
   </section>
 
   <footer id="footer">
     <div class="footer-container">
-      <div class="footer-logo">
-        <img src="../logo.png" alt="AP Industries Logo">
-        <span>AP Industries</span>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../logo.png" alt="Logo" />
+          <span>AP Industries</span>
+        </div>
+        <div class="footer-contact">
+          <ul>Email: info@apindustries.com</ul>
+          <ul>Phone: +91 9424578912</ul>
+          <ul>Address: 129-B Sector-E, Sanwer Road Behind Deepmala Dhaba, Indore, Madhya Pradesh PIN-452015</ul>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
-        <a href="#">Quality Assurance</a>
-      </div>
-      <div class="footer-contact">
-        <p>&copy; 2025 AP Industries. All Rights Reserved.</p>
-        <p>Email: contact@apindustries.com</p>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d386.67619103504006!2d75.84567829734628!3d22.776340661601303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303005dee2233%3A0x722269cda929faaf!2sA%20P%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1718370095584!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   </footer>
 
 
+  <script>
+    let product_details = [
+      {
+        "title": "Crusher Machine",
+        "image": "../images/products/double-toggle-jaw-crusher.webp",
+        "features": ["Precise quality", "Sturdy", "Longer life"]
+      },
+      {
+        "title": "Roller",
+        "image": "../images/products/roller.webp",
+        "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
+      },
+      {
+        "title": "Iron Net",
+        "image": "../images/products/fencing.webp",
+        "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
+      },
+      {
+        "title": "Wire mex screen",
+        "image": "../new_images/img13.jpg",
+        "features": ["Precised designs", "Long lasting", "Fine finish"]
+      },
+      {
+        "title": "Jaw Plate",
+        "image": "../images/products/jawPlate.webp",
+        "features": ["Good quality", "Durable", "Superb design"]
+      },
+      {
+        "title": "MS Plate Jali",
+        "image": "../images/products/ms_plate.jpeg",
+        "features": ["Precised designs", "Long lasting", "Fine finish"]
+      },
+      {
+        "title": "Vibrating Screen",
+        "image": "../images/products/vibrating-screen.webp",
+        "features": ["Longer life", "Sturdy", "Precise working"]
+      },
+      {
+        "title": "Vibrating Screen",
+        "image": "../images/products/vibrating-screen1.webp",
+        "features": ["Longer life", "Specifically designed", "Maintenance-free"]
+      },
+      {
+        "title": "Cone Crusher",
+        "image": "../images/products/cone-crusher-bowl-liner.webp",
+        "features": ["Precised designs", "Long lasting", "Corrosion resistance"]
+      },
+      {
+        "title": "Stone Crusher Spring",
+        "image": "../images/products/stone-crusher-springs.webp",
+        "features": ["Sturdy", "Precise quality", "Longer life"]
+      },
+      {
+        "title": "Socket Sealing Ring",
+        "image": "../images/products/socket-sealing-ring.webp",
+        "features": ["Industry proven designs", "Optimum quality", "High finish"]
+      },
+      {
+        "title": "Crusher Machine",
+        "image": "../images/products/double-toggle-jaw-crusher.webp",
+        "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
+      },
+      {
+        "title": "Jaw Plate",
+        "image": "../images/products/jawPlate1.webp",
+        "features": ["Precised designs", "Long lasting", "Corrosion resistance"]
+      }
+    ];
+
+    function renderProducts() {
+      const productGrid = document.getElementById("product-grid");
+
+      product_details.forEach(product => {
+        const featuresList = product.features.map(feature => `<li>${feature}</li>`).join("");
+        const productCard = `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.title}" />
+            <h3>${product.title}</h3>
+            <ul style="list-style-type: none;">${featuresList}</ul>
+          </div>
+        `;
+        productGrid.innerHTML += productCard;
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", renderProducts);
+
+    function handleWrap() {
+      const navItems = document.getElementById("nav-items");
+      if (window.innerWidth <= 830) {
+        navItems.innerHTML = `
+          <button id="nav-btn"><i class='bxr bx-menu-wider'></i></button>
+        `;
+      } else {
+        navItems.innerHTML = `
+          <li>HOME</li>
+          <li style="color: #00cfef;">PRODUCTS</li>
+          <li>GALLERY</li>
+          <li>CONTACT</li>
+          <li>QUALITY ASSURANCE</li>
+        `;
+      }
+    }
+
+    window.addEventListener("resize", handleWrap);
+    window.addEventListener("load", handleWrap);
+
+    document.getElementById("nav-items").addEventListener("click", (event) => {
+      const navItems = document.getElementById("nav-items");
+
+      if (event.target.closest("#nav-btn")) {
+        document.getElementById("navbar").style.flexDirection = "column";
+        navItems.style.width = "100%";
+        navItems.innerHTML = `
+          <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">HOME</li>
+          <li style="width: 100%; background: none; color: #00cfef; text-align: center; padding: 10px;">PRODUCTS</li>
+          <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">GALLERY</li>
+          <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">CONTACT</li>
+          <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">QUALITY ASSURANCE</li>
+          <li id="nav-btn-close" style="width: 100%; background: none; color: red; text-align: center; padding: 10px; cursor: pointer;">Close</li>
+        `;
+      }
+
+      if (event.target.id === "nav-btn-close") {
+        document.getElementById("navbar").style.flexDirection = "row";
+        navItems.style.width = "";
+        navItems.innerHTML = `
+          <li style="width: 100%;">
+            <button id="nav-btn" style="background: none; border: none; font-size: xx-large; color: white; cursor: pointer;">
+              <i class='bx bx-menu-wider'></i>
+            </button>
+          </li>
+        `;
+      }
+    });
+  </script>
+
 </body>
 </html>
-
-<script>
-  function handleWrap() {
-    const navItems = document.getElementById("nav-items");
-
-    if (window.innerWidth <= 830) {
-      navItems.innerHTML = `
-        <button id="nav-btn"><i class='bxr bx-menu-wider'></i></button>
-      `;
-    } else {
-      navItems.innerHTML = `
-        <li>HOME</li>
-        <li style="color: #00cfef;">PRODUCTS</li>
-        <li>GALLERY</li>
-        <li>CONTACT</li>
-        <li>QUALITY ASSURANCE</li>
-      `;
-    }
-  }
-
-  window.addEventListener("resize", handleWrap);
-  window.addEventListener("load", handleWrap);
-
-
-  document.getElementById("nav-items").addEventListener("click", (event) => {
-    const navItems = document.getElementById("nav-items");
-
-    if (event.target.closest("#nav-btn")) {
-      document.getElementById("navbar").style.flexDirection="column";
-      navItems.style.width="100%";
-      navItems.innerHTML = `
-        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">HOME</li>
-        <li style="width: 100%; background: none; color: #00cfef; text-align: center; padding: 10px;">PRODUCTS</li>
-        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">GALLERY</li>
-        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">CONTACT</li>
-        <li style="width: 100%; background: none; color: white; text-align: center; padding: 10px;">QUALITY ASSURANCE</li>
-        <li id="nav-btn-close" style="width: 100%; background: none; color: red; text-align: center; padding: 10px; cursor: pointer;">Close</li>
-      `;
-    }
-
-    if (event.target.id === "nav-btn-close") {
-      document.getElementById("navbar").style.flexDirection="row";
-      navItems.style.width="";
-      navItems.innerHTML = `
-        <li style="width: 100%;">
-          <button id="nav-btn" style="background: none; border: none; font-size: xx-large; color: white; cursor: pointer;">
-            <i class='bx  bx-menu-wider'></i>
-          </button>
-        </li>
-      `;
-    }
-  });
-</script>
