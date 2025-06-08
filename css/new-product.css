@@ -22,6 +22,10 @@ body {
   justify-content: flex-start;
 }
 
+.hero-paragrapgh {
+  font-size: large;
+}
+
 #overlay {
   position: absolute;
   top: 0; left: 0;
@@ -115,6 +119,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  padding: 2rem;
 }
 
 .product-card {
@@ -147,7 +152,7 @@ body {
   color: #ccc;
 }
 
-#nav-btn{
+#nav-btn {
   background: none;
   height: 40px;
   width: 40px;
@@ -156,8 +161,9 @@ body {
   border: none;
 }
 
+/* Footer */
 #footer {
-  background-color: #111;
+  background-color: #222222;
   color: #fff;
   padding: 30px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -168,8 +174,11 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+  text-align: left;
 }
 
 .footer-logo {
@@ -205,12 +214,19 @@ body {
   color: #fff;
 }
 
-.footer-contact p {
+.footer-contact ul {
   margin: 5px 0;
   font-size: 14px;
   color: #ccc;
 }
 
+.footer-map iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* Blue line under heading */
 .blue-line {
   width: 50%;
   height: 4px;
@@ -218,7 +234,6 @@ body {
   margin-top: 10px;
   border-radius: 2px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -250,7 +265,6 @@ body {
   }
 
   #navbar {
-    /* flex-direction: column; */
     align-items: flex-start;
     gap: 15px;
   }
@@ -302,5 +316,27 @@ body {
 
   #logo-box {
     font-size: 16px;
+  }
+}
+
+/* Tablet and Desktop Footer: row layout */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer-container > div:first-child {
+    flex: 2;
+  }
+
+  .footer-map {
+    flex: 1;
+  }
+
+  .footer-contact {
+    flex-basis: 100%;
+    text-align: left;
+    margin-top: 20px;
   }
 }
