@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Industries</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" />
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../css/new-style.css" />
+</head>
+
+<body>
+  <!-- Sidebar for mobile nav -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <ul>
+      <li class="active">HOME</li>
+      <li>PRODUCTS</li>
+      <li>GALLERY</li>
+      <li>CONTACT</li>
+      <li>QUALITY ASSURANCE</li>
+    </ul>
+  </div>
+  <div class="background">
+    <div id="navbar">
+      <div id="logo-box">
+        <img id="logo" src="../logo.png" alt="Logo" />
+        <span>AP Industries</span>
+      </div>
+      <ul id="nav-items">
+        <li class="active">HOME</li>
+        <li>PRODUCTS</li>
+        <li>GALLERY</li>
+        <li>CONTACT</li>
+        <li>QUALITY ASSURANCE</li>
+      </ul>
+      <button id="nav-btn">
+        <i class='bx bx-menu-wider'></i>
+      </button>
+    </div>
+    <div class="main-heading">
+      <h1>
+        <span class="heading-blue">AP</span>
+        <span class="heading-white">INDUSTRIES</span>
+      </h1>
+      <p class="heading-subtitle">
+        MAKING THE WORLD BETTER WITH INNOVATIVE INDUSTRIAL SOLUTIONS.
+      </p>
+    </div>
+    <hr class="heading-hr" />
+    <div class="main-content">
+      <div class="content-box">
+        <h2>Welcome to AP Industries</h2>
+        <p>
+          At AP Industries, we are committed to delivering high-quality industrial solutions that meet the needs of our
+          clients. Our team of experts works tirelessly to ensure that we provide the best products and services in the
+          industry.
+        </p>
+        <p>
+          Explore our range of products and services designed to enhance efficiency and productivity in your operations.
+          From cutting-edge technology to reliable support, we have everything you need to succeed.
+        </p>
+      </div>
+      <div class="hot-products">
+        <h2>HOT <blue>PRODUCTS</blue>
+        </h2>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="../new_images/img1.jpg" alt="Product 1" />
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+          </div>
+          <div class="product-item">
+            <img src="../new_images/img10.jpg" alt="Product 2" />
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yt-video">
+      <iframe src="https://www.youtube.com/embed/UZ7a7ufLllo?si=YDvnRIly3zluRDcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+<script>
+  // Sidebar toggle logic for mobile nav
+  const sidebar = document.getElementById('sidebar');
+  const navBtn = document.getElementById('nav-btn');
+  const closeSidebar = document.getElementById('closeSidebar');
+
+  function handleSidebar() {
+    if (window.innerWidth <= 830) {
+      if (navBtn) navBtn.style.display = "block";
+    } else {
+      if (navBtn) navBtn.style.display = "none";
+      sidebar.classList.remove('open');
+    }
+  }
+
+  window.addEventListener("resize", handleSidebar);
+  window.addEventListener("load", handleSidebar);
+
+  if (navBtn) {
+    navBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      sidebar.classList.add('open');
+    });
+  }
+  if (closeSidebar) {
+    closeSidebar.addEventListener('click', function () {
+      sidebar.classList.remove('open');
+    });
+  }
+
+  // Optional: Close sidebar when clicking outside
+  window.addEventListener('click', function (e) {
+    if (window.innerWidth <= 830 && sidebar.classList.contains('open')) {
+      if (!sidebar.contains(e.target) && e.target !== navBtn) {
+        sidebar.classList.remove('open');
+      }
+    }
+  });
+</script>
+
+</html>
