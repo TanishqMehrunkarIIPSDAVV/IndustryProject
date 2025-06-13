@@ -9,7 +9,7 @@ body
     padding-top: 50px;
     padding-left: 30px;
     padding-right: 30px;
-    background-image: url(../images/images/nav-bar/worker-5736096_1280.jpg);
+    background: url(../images/images/nav-bar/worker-5736096_1280.jpg) fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,6 +76,15 @@ body
 #nav-items li:hover,
 #nav-items li.active {
   color: #00bfff;
+}
+
+#nav-btn {
+  background: none;
+  height: 40px;
+  width: 40px;
+  color: white;
+  font-size: xx-large;
+  border: none;
 }
 
 #nav-items li::after {
@@ -163,11 +172,12 @@ body
   display: flex;
   gap: 10px;
   margin-top: 100px;
+  width: 100%;
 }
 .content-box
 {
     margin-left: 10px;
-    width: 700px;
+    width: 45%;
     padding: 20px;
     background-color: #00bfff;
     border-radius: 12px;
@@ -175,10 +185,10 @@ body
     margin-top: 20px;
     color: black;
     padding: 20px;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.6;
     text-align: justify;
-    max-height: 400px;
+    height: 43vh;
 }
 .content-box p
 {
@@ -197,6 +207,7 @@ body
     padding: 20px;
     border-radius: 12px;
     color: black;
+    width: 55%;
 }
 .hot-products h2
 {
@@ -212,18 +223,29 @@ body
 }
 .hot-products img
 {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 4/3;
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    display: block;
+    object-fit: cover;
+}
+.hot-products h2
+{
+  text-align: left;
+}
+.product-list
+{
+  display: flex;
+  gap: 20px;
+  width: 100%;
 }
 /* ...existing code... */
 
 @media(max-width: 830px)
 {
     #navbar {
-        flex-direction: column;
         align-items: center;
         padding: 18px 20px;
     }
@@ -246,4 +268,112 @@ body
     .heading-blue, .heading-white {
         font-size: 60px;
     }
+
+    .heading-hr
+    {
+      width: 90%;
+      margin-left: 20px;;
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-box, .hot-products {
+        width: 90%;
+        margin-left: 0;
+    }
+    .content-box{
+        height: auto;
+    }
+
+    .hot-products h2
+    {
+      color: black;
+    }
+}
+
+@media(max-width: 450px)
+{
+  .heading-blue, .heading-white {
+    font-size: 50px;
+  }
+  #logo-box span{
+    font-size: 20px;
+  }
+
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(10,30,60,0.97);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: right 0.35s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2em;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 32px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar li {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 10px;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  color: #00bfff;
+}
+
+/* Hide original nav on small screens */
+@media (max-width: 830px) {
+  #nav-items {
+    display: none !important;
+  }
+  #nav-btn {
+    display: block !important;
+  }
+}
+
+/* Show menu button only on small screens */
+#nav-btn {
+  background: none;
+  border: none;
+  font-size: xx-large;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
