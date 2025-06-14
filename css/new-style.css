@@ -259,9 +259,85 @@ body
     box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 /* ...existing code... */
+/* Footer */
+#footer {
+  background-color: #222222;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10rem;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-logo span {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #00cfef;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contact ul {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
 
 @media(max-width: 830px)
 {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    .footer-logo
+    {
+      justify-content: center;
+      gap: 20px;;
+    }
+
     #navbar {
         align-items: center;
         padding: 18px 20px;
@@ -314,6 +390,9 @@ body
   }
   #logo-box span{
     font-size: 20px;
+  }
+  .footer-logo span {
+    font-size: 30px;
   }
 
 }
