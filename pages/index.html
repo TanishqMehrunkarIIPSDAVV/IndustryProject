@@ -22,6 +22,17 @@
       <li>QUALITY ASSURANCE</li>
     </ul>
   </div>
+  <!-- Sidebar Contact Form -->
+<div class="sidebar-contact" id="sidebarContact">
+  <button class="close-btn" id="closeSidebarContact">&times;</button>
+  <form class="contact-form">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
   <div class="background">
     <div id="navbar">
       <div id="logo-box">
@@ -201,6 +212,58 @@
       if (!sidebar.contains(e.target) && e.target !== navBtn) {
         sidebar.classList.remove('open');
       }
+    }
+  });
+</script>
+<script>
+  // Sidebar Contact Form logic
+  const sidebarContact = document.getElementById('sidebarContact');
+  const closeSidebarContact = document.getElementById('closeSidebarContact');
+
+  // Open on navbar CONTACT click
+  document.querySelectorAll('#nav-items li, .sidebar li').forEach(li => {
+    if (li.textContent.trim().toUpperCase() === "CONTACT") {
+      li.addEventListener('click', function(e) {
+        e.preventDefault();
+        sidebarContact.classList.add('open');
+      });
+    }
+  });
+
+  // Close button
+  if (closeSidebarContact) {
+    closeSidebarContact.addEventListener('click', function() {
+      sidebarContact.classList.remove('open');
+    });
+  }
+
+  // Optional: Close when clicking outside
+  window.addEventListener('click', function(e) {
+    if (
+      sidebarContact.classList.contains('open') &&
+      !sidebarContact.contains(e.target) &&
+      !(
+        e.target.textContent &&
+        e.target.textContent.trim().toUpperCase() === "CONTACT"
+      )
+    ) {
+      sidebarContact.classList.remove('open');
+    }
+  });
+
+  // Prevent closing when clicking inside the form
+  sidebarContact.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+</script>
+<script>
+  // Sticky navbar background on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
   });
 </script>
