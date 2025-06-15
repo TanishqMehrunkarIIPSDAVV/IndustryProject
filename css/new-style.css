@@ -397,6 +397,15 @@ body
 
 }
 
+@media(max-width:1450px) and (min-width:810px){
+  .content-box p {
+    font-size: clamp(9px, 2vw, 15px);
+  }
+  .content-box h2 {
+    font-size: clamp(15px, 2vw, 19px);
+  }
+}
+
 /* Sidebar styles */
 .sidebar {
   position: fixed;
