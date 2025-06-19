@@ -15,24 +15,24 @@
   <div class="sidebar" id="sidebar">
     <button class="close-btn" id="closeSidebar">&times;</button>
     <ul>
-      <li class="active">HOME</li>
-      <li>PRODUCTS</li>
-      <li>GALLERY</li>
+      <li class="active"><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
       <li>CONTACT</li>
-      <li>QUALITY ASSURANCE</li>
+      <li><a href="quality.html">QUALITY ASSURANCE</a></li>
     </ul>
   </div>
   <!-- Sidebar Contact Form -->
-<div class="sidebar-contact" id="sidebarContact">
-  <button class="close-btn" id="closeSidebarContact">&times;</button>
-  <form class="contact-form">
-    <h2>Contact Us</h2>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</div>
+  <div class="sidebar-contact" id="sidebarContact">
+    <button class="close-btn" id="closeSidebarContact">&times;</button>
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
   <div class="background">
     <div id="navbar">
       <div id="logo-box">
@@ -40,11 +40,11 @@
         <span>AP Industries</span>
       </div>
       <ul id="nav-items">
-        <li class="active">HOME</li>
-        <li>PRODUCTS</li>
-        <li>GALLERY</li>
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
         <li>CONTACT</li>
-        <li>QUALITY ASSURANCE</li>
+        <li><a href="quality.html">QUALITY ASSURANCE</a></li>
       </ul>
       <button id="nav-btn">
         <i class='bx bx-menu-wider'></i>
@@ -223,7 +223,7 @@
   // Open on navbar CONTACT click
   document.querySelectorAll('#nav-items li, .sidebar li').forEach(li => {
     if (li.textContent.trim().toUpperCase() === "CONTACT") {
-      li.addEventListener('click', function(e) {
+      li.addEventListener('click', function (e) {
         e.preventDefault();
         sidebarContact.classList.add('open');
       });
@@ -232,13 +232,13 @@
 
   // Close button
   if (closeSidebarContact) {
-    closeSidebarContact.addEventListener('click', function() {
+    closeSidebarContact.addEventListener('click', function () {
       sidebarContact.classList.remove('open');
     });
   }
 
   // Optional: Close when clicking outside
-  window.addEventListener('click', function(e) {
+  window.addEventListener('click', function (e) {
     if (
       sidebarContact.classList.contains('open') &&
       !sidebarContact.contains(e.target) &&
@@ -252,14 +252,14 @@
   });
 
   // Prevent closing when clicking inside the form
-  sidebarContact.addEventListener('click', function(e) {
+  sidebarContact.addEventListener('click', function (e) {
     e.stopPropagation();
   });
 </script>
 <script>
   // Sticky navbar background on scroll
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
     } else {

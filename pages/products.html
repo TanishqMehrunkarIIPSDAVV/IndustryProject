@@ -8,6 +8,8 @@
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" type="image/x-icon" href="../logo.png">
   <link rel="stylesheet" href="../css/new-product.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -15,13 +17,27 @@
   <div class="sidebar" id="sidebar">
     <button class="close-btn" id="closeSidebar">&times;</button>
     <ul>
-      <li class="active">HOME</li>
-      <li>PRODUCTS</li>
-      <li>GALLERY</li>
-      <li>CONTACT</li>
-      <li>QUALITY ASSURANCE</li>
+      <li><a href="index.html">HOME</a></li>
+      <li class="active"><a href="products.html">PRODUCTS</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="#">CONTACT</a></li>
+      <li><a href="quality.html">QUALITY ASSURANCE</a></li>
     </ul>
   </div>
+
+
+  <div class="sidebar-contact" id="sidebarContact">
+    <button class="close-btn" id="closeSidebarContact">&times;</button>
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+
   <div class="background">
     <div id="navbar">
       <div id="logo-box">
@@ -29,11 +45,11 @@
         <span>AP Industries</span>
       </div>
       <ul id="nav-items">
-        <li class="active">HOME</li>
-        <li>PRODUCTS</li>
-        <li>GALLERY</li>
+        <li ><a href="index.html">HOME</a></li>
+        <li class="active"><a href="products.html">PRODUCTS</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
         <li>CONTACT</li>
-        <li>QUALITY ASSURANCE</li>
+        <li><a href="quality.html">QUALITY ASSURANCE</a></li>
       </ul>
       <button id="nav-btn">
         <i class='bx bx-menu-wider'></i>
@@ -55,7 +71,8 @@
 
     <section id="products">
       <h2>Explore Our Product Range</h2>
-      <div class="product-grid" id="product-grid">
+      <div class="product-carousel-wrapper">
+        <div class="owl-carousel product-carousel" id="product-grid"></div>
       </div>
     </section>
 
@@ -69,7 +86,7 @@
           <div class="footer-contact">
             <ul>Email: info@apindustries.com</ul>
             <ul>Phone: +91 9424578912</ul>
-            <ul>Address: 129-B Sector-E, Sanwer Road Behind Deepmala Dhaba, Indore, Madhya Pradesh PIN-452015</ul>
+            <ul>Address: 129-B Sector-E, Sanwer Road...</ul>
           </div>
         </div>
         <div class="footer-map">
@@ -80,154 +97,216 @@
       </div>
     </footer>
 
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  handleWrap();
+  handleSidebar();
+  bindContactEvent();
+  rebindNavBtn();
+});
 
-    <script>
-      let product_details = [
-        {
-          "title": "Crusher Machine",
-          "image": "../images/products/double-toggle-jaw-crusher.webp",
-          "features": ["Precise quality", "Sturdy", "Longer life"]
-        },
-        {
-          "title": "Roller",
-          "image": "../images/products/roller.webp",
-          "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
-        },
-        {
-          "title": "Iron Net",
-          "image": "../images/products/fencing.webp",
-          "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
-        },
-        {
-          "title": "Wire mex screen",
-          "image": "../new_images/img13.jpg",
-          "features": ["Precised designs", "Long lasting", "Fine finish"]
-        },
-        {
-          "title": "Jaw Plate",
-          "image": "../images/products/jawPlate.webp",
-          "features": ["Good quality", "Durable", "Superb design"]
-        },
-        {
-          "title": "MS Plate Jali",
-          "image": "../images/products/ms_plate.jpeg",
-          "features": ["Precised designs", "Long lasting", "Fine finish"]
-        },
-        {
-          "title": "Vibrating Screen",
-          "image": "../images/products/vibrating-screen.webp",
-          "features": ["Longer life", "Sturdy", "Precise working"]
-        },
-        {
-          "title": "Vibrating Screen",
-          "image": "../images/products/vibrating-screen1.webp",
-          "features": ["Longer life", "Specifically designed", "Maintenance-free"]
-        },
-        {
-          "title": "Cone Crusher",
-          "image": "../images/products/cone-crusher-bowl-liner.webp",
-          "features": ["Precised designs", "Long lasting", "Corrosion resistance"]
-        },
-        {
-          "title": "Stone Crusher Spring",
-          "image": "../images/products/stone-crusher-springs.webp",
-          "features": ["Sturdy", "Precise quality", "Longer life"]
-        },
-        {
-          "title": "Socket Sealing Ring",
-          "image": "../images/products/socket-sealing-ring.webp",
-          "features": ["Industry proven designs", "Optimum quality", "High finish"]
-        },
-        {
-          "title": "Crusher Machine",
-          "image": "../images/products/double-toggle-jaw-crusher.webp",
-          "features": ["Corrosion resistance", "Long lasting", "Fine finish"]
-        },
-        {
-          "title": "Jaw Plate",
-          "image": "../images/products/jawPlate1.webp",
-          "features": ["Precised designs", "Long lasting", "Corrosion resistance"]
-        }
-      ];
+window.addEventListener("resize", () => {
+  handleWrap();
+  handleSidebar();
+});
 
-      function renderProducts() {
-        const productGrid = document.getElementById("product-grid");
+const product_details = [
+  {
+    title: "Crusher Machine",
+    image: "../images/products/double-toggle-jaw-crusher.webp",
+    features: ["Precise quality", "Sturdy", "Longer life"]
+  },
+  {
+    title: "Roller",
+    image: "../images/products/roller.webp",
+    features: ["Corrosion resistance", "Long lasting", "Fine finish"]
+  },
+  {
+    title: "Iron Net",
+    image: "../images/products/fencing.webp",
+    features: ["Corrosion resistance", "Long lasting", "Fine finish"]
+  },
+  {
+    title: "Wire mex screen",
+    image: "../new_images/img13.jpg",
+    features: ["Precised designs", "Long lasting", "Fine finish"]
+  },
+  {
+    title: "Jaw Plate",
+    image: "../images/products/jawPlate.webp",
+    features: ["Good quality", "Durable", "Superb design"]
+  },
+  {
+    title: "MS Plate Jali",
+    image: "../images/products/ms_plate.jpeg",
+    features: ["Precised designs", "Long lasting", "Fine finish"]
+  },
+  {
+    title: "Vibrating Screen",
+    image: "../images/products/vibrating-screen.webp",
+    features: ["Longer life", "Sturdy", "Precise working"]
+  },
+  {
+    title: "Vibrating Screen",
+    image: "../images/products/vibrating-screen1.webp",
+    features: ["Longer life", "Specifically designed", "Maintenance-free"]
+  },
+  {
+    title: "Cone Crusher",
+    image: "../images/products/cone-crusher-bowl-liner.webp",
+    features: ["Precised designs", "Long lasting", "Corrosion resistance"]
+  },
+  {
+    title: "Stone Crusher Spring",
+    image: "../images/products/stone-crusher-springs.webp",
+    features: ["Sturdy", "Precise quality", "Longer life"]
+  },
+  {
+    title: "Socket Sealing Ring",
+    image: "../images/products/socket-sealing-ring.webp",
+    features: ["Industry proven designs", "Optimum quality", "High finish"]
+  },
+  {
+    title: "Crusher Machine",
+    image: "../images/products/double-toggle-jaw-crusher.webp",
+    features: ["Corrosion resistance", "Long lasting", "Fine finish"]
+  },
+  {
+    title: "Jaw Plate",
+    image: "../images/products/jawPlate1.webp",
+    features: ["Precised designs", "Long lasting", "Corrosion resistance"]
+  }
+];
 
-        product_details.forEach(product => {
-          const featuresList = product.features.map(feature => `<li>${feature}</li>`).join("");
-          const productCard = `
-          <div class="product-card">
-            <img src="${product.image}" alt="${product.title}" />
-            <h3>${product.title}</h3>
-            <ul style="list-style-type: none;">${featuresList}</ul>
+function renderProducts() {
+  const productGrid = document.getElementById("product-grid");
+  let html = '';
+  product_details.forEach(product => {
+    const featuresList = product.features.map(f => `<li>${f}</li>`).join("");
+    html += `
+      <div class="card-container">
+        <div class="card-effect">
+          <div class="card-inner">
+            <div class="card__liquid"></div>
+            <div class="card__shine"></div>
+            <div class="card__glow"></div>
+            <div class="card__content">
+              <div class="card__badge">TRENDING</div>
+              <div class="card__image" style="--bg-color: #ff6b6b">
+                <img src="${product.image}" alt="${product.title}" style="width:100%; height:100%; object-fit:cover; border-radius:15px" />
+              </div>
+              <div class="card__text">
+                <p class="card__title">${product.title}</p>
+                <ul class="card__features" style="list-style-type: none;">${featuresList}</ul>
+              </div>
+            </div>
           </div>
-        `;
+        </div>
+      </div>
+    `;
+  });
+  productGrid.innerHTML = html;
 
-          productGrid.innerHTML += productCard;
-        });
-      }
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 16,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      830: { items: 2 },
+      1000: { items: 3 },
+      1200: { items: 4 }
+    }
+  });
+}
 
-      window.addEventListener("DOMContentLoaded", renderProducts);
+function rebindNavBtn() {
+  const navBtn = document.getElementById('nav-btn');
+  if (navBtn) {
+    navBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      document.getElementById('sidebar').classList.add('open');
+    });
+  }
+}
 
-      function handleWrap() {
-        const navItems = document.getElementById("nav-items");
-        if (window.innerWidth <= 830) {
-          navItems.innerHTML = `
-          <button id="nav-btn"><i class='bxr bx-menu-wider'></i></button>
-        `;
-        } else {
-          navItems.innerHTML = `
-          <li>HOME</li>
-          <li style="color: #00cfef;">PRODUCTS</li>
-          <li>GALLERY</li>
-          <li>CONTACT</li>
-          <li>QUALITY ASSURANCE</li>
-        `;
-        }
-      }
-
-      window.addEventListener("resize", handleWrap);
-      window.addEventListener("load", handleWrap);
-
-  // Sidebar toggle logic for mobile nav
-      const sidebar = document.getElementById('sidebar');
-      const navBtn = document.getElementById('nav-btn');
-      const closeSidebar = document.getElementById('closeSidebar');
-
-      function handleSidebar() {
-        if (window.innerWidth <= 830) {
-          if (navBtn) navBtn.style.display = "block";
-        } else {
-          if (navBtn) navBtn.style.display = "none";
-          sidebar.classList.remove('open');
-        }
-      }
-
-      window.addEventListener("resize", handleSidebar);
-      window.addEventListener("load", handleSidebar);
-
-      if (navBtn) {
-        navBtn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          sidebar.classList.add('open');
-        });
-      }
-      if (closeSidebar) {
-        closeSidebar.addEventListener('click', function () {
-          sidebar.classList.remove('open');
-        });
-      }
-
-      // Optional: Close sidebar when clicking outside
-      window.addEventListener('click', function (e) {
-        if (window.innerWidth <= 830 && sidebar.classList.contains('open')) {
-          if (!sidebar.contains(e.target) && e.target !== navBtn) {
-            sidebar.classList.remove('open');
-          }
-        }
+function bindContactEvent() {
+  document.querySelectorAll('#nav-items li, .sidebar li').forEach(li => {
+    if (li.textContent.trim().toUpperCase() === "CONTACT") {
+      li.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('sidebarContact').classList.add('open');
       });
-    </script>
+    }
+  });
+}
 
+function handleWrap() {
+  bindContactEvent();
+}
+
+function handleSidebar() {
+  const navBtn = document.getElementById('nav-btn');
+  const sidebar = document.getElementById('sidebar');
+  if (window.innerWidth <= 830) {
+    if (navBtn) navBtn.style.display = "block";
+  } else {
+    if (navBtn) navBtn.style.display = "none";
+    sidebar.classList.remove('open');
+  }
+}
+
+const sidebar = document.getElementById('sidebar');
+const closeSidebar = document.getElementById('closeSidebar');
+if (closeSidebar) {
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+  });
+}
+
+window.addEventListener('click', function (e) {
+  const navBtn = document.getElementById('nav-btn');
+  if (window.innerWidth <= 830 && sidebar.classList.contains('open')) {
+    if (!sidebar.contains(e.target) && e.target !== navBtn) {
+      sidebar.classList.remove('open');
+    }
+  }
+});
+
+const sidebarContact = document.getElementById('sidebarContact');
+const closeSidebarContact = document.getElementById('closeSidebarContact');
+
+if (closeSidebarContact) {
+  closeSidebarContact.addEventListener('click', function () {
+    sidebarContact.classList.remove('open');
+  });
+}
+
+window.addEventListener('click', function (e) {
+  if (
+    sidebarContact.classList.contains('open') &&
+    !sidebarContact.contains(e.target) &&
+    !(
+      e.target.textContent &&
+      e.target.textContent.trim().toUpperCase() === "CONTACT"
+    )
+  ) {
+    sidebarContact.classList.remove('open');
+  }
+});
+
+sidebarContact.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+</script>
 </body>
 
 </html>
