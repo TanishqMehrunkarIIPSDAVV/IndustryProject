@@ -23,7 +23,10 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
   flex-wrap: wrap;
 }
 
@@ -133,10 +136,9 @@ body {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 10rem;
   padding: 20px;
   text-align: left;
 }
@@ -149,24 +151,34 @@ body {
 }
 
 .footer-logo img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .footer-logo span {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
 }
 
+.footer-links {
+  margin-bottom: 15px;
+}
 
+.footer-links a {
+  color: #00cfef;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-
-
-
+.footer-links a:hover {
+  color: #fff;
+}
 
 .footer-contact ul {
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 20px;
   color: #ccc;
 }
 
@@ -272,9 +284,7 @@ body {
 }
 
 .background {
-  padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 20px;
   background: url("../images/images/nav-bar/worker-5736096_1280.jpg") fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,10 +299,12 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
   flex-wrap: wrap;
   padding: 18px 40px;
-  border-radius: 18px;
   margin-bottom: 36px;
   background: none;
   backdrop-filter: none;
@@ -521,6 +533,20 @@ body {
   #logo-box span {
     font-size: 20px;
   }
+}
+
+/* Sticky navbar styles */
+#navbar {
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 100;
+}
+
+#navbar.scrolled {
+  background: rgba(10, 30, 60, 0.97);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
 }
 
 /* Sidebar styles */

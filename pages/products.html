@@ -44,7 +44,6 @@
       <input type="text" id="mobile" placeholder="Your Phone Number" required />
       <textarea placeholder="Your Message" id="message" rows="5" required></textarea>
       <button type="submit" onclick="event.preventDefault(); sendMail();">Send</button>
-      <button type="submit">Send</button>
     </form>
   </div>
 
@@ -97,7 +96,7 @@
           <div class="footer-contact">
             <ul>Email: info@apindustries.com</ul>
             <ul>Phone: +91 9424578912</ul>
-            <ul>Address: 129-B Sector-E, Sanwer Road...</ul>
+            <ul>Address: 129-B Sector-E, Sanwer Road Behind Deepmala Dhaba, Indore, Madhya Pradesh PIN-452015</ul>
           </div>
         </div>
         <div class="footer-map">
@@ -317,6 +316,14 @@ sidebarContact.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 </script>
 </body>
 
