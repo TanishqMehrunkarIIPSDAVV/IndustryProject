@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="../css/new-product.css">
   <link rel="stylesheet" href="../css/owl.carousel.min.css">
   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "32eZKO7jpglEqGWaV",
+      });
+    })();
+    </script>
+    <script src="../js/mail.js"></script>
 </head>
 
 <body>
@@ -30,10 +38,12 @@
     <button class="close-btn" id="closeSidebarContact">&times;</button>
     <form class="contact-form">
       <h2>Contact Us</h2>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="mail" placeholder="Your Email" required />
+      <input type="text" id="subject" placeholder="Your Subject" required />
+      <input type="text" id="mobile" placeholder="Your Phone Number" required />
+      <textarea placeholder="Your Message" id="message" rows="5" required></textarea>
+      <button type="submit" onclick="event.preventDefault(); sendMail();">Send</button>
     </form>
   </div>
 
@@ -86,7 +96,7 @@
           <div class="footer-contact">
             <ul>Email: info@apindustries.com</ul>
             <ul>Phone: +91 9424578912</ul>
-            <ul>Address: 129-B Sector-E, Sanwer Road...</ul>
+            <ul>Address: 129-B Sector-E, Sanwer Road Behind Deepmala Dhaba, Indore, Madhya Pradesh PIN-452015</ul>
           </div>
         </div>
         <div class="footer-map">
@@ -306,6 +316,14 @@ sidebarContact.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 </script>
 </body>
 
