@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | AP Industries</title>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="../logo.png">
+  <link rel="stylesheet" href="../css/new-gallery.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "32eZKO7jpglEqGWaV",
+      });
+    })();
+  </script>
+  <script src="../js/mail.js"></script>
+</head>
+
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li class="active"><a href="gallery.html">GALLERY</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </div>
+
+
+  <div class="sidebar-contact" id="sidebarContact">
+    <button class="close-btn" id="closeSidebarContact">&times;</button>
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="mail" placeholder="Your Email" required />
+      <input type="text" id="subject" placeholder="Your Subject" required />
+      <input type="text" id="mobile" placeholder="Your Phone Number" required />
+      <textarea placeholder="Your Message" id="message" rows="5" required></textarea>
+      <button type="submit" onclick="event.preventDefault(); sendMail();">Send</button>
+    </form>
+  </div>
+
+
+  <div class="background">
+    <div id="navbar">
+      <div id="logo-box">
+        <img id="logo" src="../logo.png" alt="Logo" />
+        <span>AP Industries</span>
+      </div>
+      <ul id="nav-items">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li class="active"><a href="gallery.html">GALLERY</a></li>
+        <li>CONTACT</li>
+
+      </ul>
+      <button id="nav-btn">
+        <i class='bx bx-menu-wider'></i>
+      </button>
+    </div>
+    <div class="main-heading-wrapper" style="display: flex; align-items: flex-start; gap: 32px; flex-wrap: wrap;">
+      <div class="main-heading" style="flex: 2 1 350px; min-width: 300px;">
+        <h1>
+          <span class="heading-blue">QUALITY</span>
+          <span class="heading-white">ASSURANCE</span>
+        </h1>
+        <p class="heading-subtitle">
+          Committed to delivering unmatched quality through rigorous testing, continuous monitoring, and strict adherence
+          to
+          international standards. Our quality assurance processes ensure that every product meets durability, safety, and
+          performance benchmarks — guaranteeing consistent excellence and customer satisfaction across all applications.
+        </p>
+      </div>
+      <div class="certificate-image">
+        <img src="../new_images/img12.jpg" alt="Certificate" />
+      </div>
+    </div>
+    <hr class="heading-hr" />
+
+    <section id="products">
+      <h2>Gallery</h2>
+      <div class="product-carousel-wrapper">
+        <div class="owl-carousel product-carousel" id="product-grid"></div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../logo.png" alt="Logo" />
+            <span>AP Industries</span>
+          </div>
+          <div class="footer-contact">
+            <ul>Email: info@apindustries.com</ul>
+            <ul>Phone: +91 9424578912</ul>
+            <ul>Address: 129-B Sector-E, Sanwer Road Behind Deepmala Dhaba, Indore, Madhya Pradesh PIN-452015</ul>
+          </div>
+        </div>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d386.67619103504006!2d75.84567829734628!3d22.776340661601303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303005dee2233%3A0x722269cda929faaf!2sA%20P%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1718370095584!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProducts();
+        handleWrap();
+        handleSidebar();
+        bindContactEvent();
+        rebindNavBtn();
+      });
+
+      window.addEventListener("resize", () => {
+        handleWrap();
+        handleSidebar();
+      });
+
+
+
+function renderProducts() {
+  const productGrid = document.getElementById("product-grid");
+  let html = '';
+
+  for (let num = 1; num < 22; num++) {
+    if(num!=12 && num!=4 && num!=5 && num!=19 && num!=21){
+    html += `
+      <div class="carousel-image-item">
+        <img src="../new_images/img${num}.jpg" alt="Product Image ${num}" />
+      </div>
+    `;
+    }
+  }
+
+  productGrid.innerHTML = html;
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 16,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      830: { items: 2 },
+      1000: { items: 3 },
+      1200: { items: 4 }
+    }
+  });
+}
+
+
+      function rebindNavBtn() {
+        const navBtn = document.getElementById('nav-btn');
+        if (navBtn) {
+          navBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            document.getElementById('sidebar').classList.add('open');
+          });
+        }
+      }
+
+      function bindContactEvent() {
+        document.querySelectorAll('#nav-items li, .sidebar li').forEach(li => {
+          if (li.textContent.trim().toUpperCase() === "CONTACT") {
+            li.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.getElementById('sidebarContact').classList.add('open');
+            });
+          }
+        });
+      }
+
+      function handleWrap() {
+        bindContactEvent();
+      }
+
+      function handleSidebar() {
+        const navBtn = document.getElementById('nav-btn');
+        const sidebar = document.getElementById('sidebar');
+        if (window.innerWidth <= 830) {
+          if (navBtn) navBtn.style.display = "block";
+        } else {
+          if (navBtn) navBtn.style.display = "none";
+          sidebar.classList.remove('open');
+        }
+      }
+
+      const sidebar = document.getElementById('sidebar');
+      const closeSidebar = document.getElementById('closeSidebar');
+      if (closeSidebar) {
+        closeSidebar.addEventListener('click', () => {
+          sidebar.classList.remove('open');
+        });
+      }
+
+      window.addEventListener('click', function (e) {
+        const navBtn = document.getElementById('nav-btn');
+        if (window.innerWidth <= 830 && sidebar.classList.contains('open')) {
+          if (!sidebar.contains(e.target) && e.target !== navBtn) {
+            sidebar.classList.remove('open');
+          }
+        }
+      });
+
+      const sidebarContact = document.getElementById('sidebarContact');
+      const closeSidebarContact = document.getElementById('closeSidebarContact');
+
+      if (closeSidebarContact) {
+        closeSidebarContact.addEventListener('click', function () {
+          sidebarContact.classList.remove('open');
+        });
+      }
+
+      window.addEventListener('click', function (e) {
+        if (
+          sidebarContact.classList.contains('open') &&
+          !sidebarContact.contains(e.target) &&
+          !(
+            e.target.textContent &&
+            e.target.textContent.trim().toUpperCase() === "CONTACT"
+          )
+        ) {
+          sidebarContact.classList.remove('open');
+        }
+      });
+
+      sidebarContact.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 10) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+</body>
+
+</html>
